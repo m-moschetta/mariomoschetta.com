@@ -342,7 +342,7 @@
       '<section class="section sec-ink"><div class="wrap--narrow"><div class="eyebrow-row">' +
       eyebrow(s.eyebrow + " · " + s.pathLabel, true) + '</div><div class="cv">' + cv + '</div></div></section>' +
       '<section class="section"><div class="wrap">' + eyebrow(s.valoriEyebrow) +
-      '<h2 class="sec-h">' + esc(s.valoriH) + '</h2><div class="valori">' + valori + '</div></div></section>';
+      '<h2 class="sec-h">' + esc(s.valoriH) + '</h2><div class="valori stack stack--valori stack--numbered">' + valori + '</div></div></section>';
   }
 
   function progettiBody(t) {
@@ -359,7 +359,7 @@
     return '<section class="section pagehead"><div class="wrap">' + eyebrow(p.eyebrow) +
       '<h1 class="pagehead__h">' + esc(p.h) + '</h1><p class="pagehead__lead">' + esc(p.lead) + '</p>' +
       '<img class="pagehead__img" src="assets/mario-pitch.jpg" alt="Mario presenta Fyblo sul palco" loading="lazy"></div></section>' +
-      '<section class="section sec-sand"><div class="wrap"><div class="cases">' + cases + '</div></div></section>';
+      '<section class="section sec-sand"><div class="wrap"><div class="cases stack">' + cases + '</div></div></section>';
   }
 
   function aziendeBody(t) {
@@ -372,7 +372,7 @@
     return '<section class="section pagehead"><div class="wrap">' + eyebrow(a.eyebrow) +
       '<h1 class="pagehead__h">' + esc(a.h) + '</h1><p class="pagehead__lead">' + esc(a.lead) + '</p></div></section>' +
       '<section class="section sec-sand"><div class="wrap">' + eyebrow(a.stepEyebrow) +
-      '<div class="steps">' + steps + '</div></div></section>' +
+      '<div class="steps stack">' + steps + '</div></div></section>' +
       '<section class="section"><div class="wrap">' + eyebrow(a.forEyebrow) + '<div class="forwho">' +
       '<div class="forwho__col"><h3>' + esc(a.forYes.t) + '</h3><ul class="forwho__list">' + li(a.forYes.items) + '</ul></div>' +
       '<div class="forwho__col forwho__col--no"><h3>' + esc(a.forNo.t) + '</h3><ul class="forwho__list">' + li(a.forNo.items) + '</ul></div>' +
