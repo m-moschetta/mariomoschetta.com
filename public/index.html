@@ -33,7 +33,7 @@
   <link rel="stylesheet" href="styles/effects.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/components.css">
-  <link rel="stylesheet" href="styles/site.css?v=3">
+  <link rel="stylesheet" href="styles/site.css?v=4">
 </head>
 <body>
 <div class="site">
@@ -244,7 +244,7 @@
             <span class="media-card__k"><i data-lucide="mic"></i> <span data-i18n="racconto.podK">Podcast · settimanale</span></span>
             <h3 class="media-card__t" data-i18n="racconto.podT">Thinking Forward</h3>
             <p class="media-card__sub" data-i18n="racconto.podSub">Il podcast che conduco con Giancarlo. Spotify + YouTube.</p>
-            <iframe class="media-embed media-embed--spotify" title="Thinking Forward — Spotify" src="https://open.spotify.com/embed/show/033qRcp0MspugE5BkK8Y5z?theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe class="media-embed media-embed--spotify mm-embed" title="Thinking Forward — Spotify" data-src="https://open.spotify.com/embed/show/033qRcp0MspugE5BkK8Y5z?theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
           </div>
         </div>
         <div class="racconto__more" style="margin-top:var(--space-6)">
@@ -303,7 +303,8 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <small data-i18n="footer.rights">© 2026 Mario Moschetta · Milano</small>
+        <small data-i18n="footer.rights">© 2026 Mario Moschetta · Milano · P.IVA 11422490968</small>
+        <small><a href="privacy.html" data-i18n="footer.privacy">Privacy &amp; cookie</a></small>
         <small data-i18n="footer.built">Costruito a Milano ⚡</small>
       </div>
     </div>
@@ -312,6 +313,7 @@
 </div>
 
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="cookie.js"></script>
 <script src="links.js"></script>
 <script src="app.js"></script>
 </body>

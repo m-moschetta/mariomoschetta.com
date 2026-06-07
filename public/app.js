@@ -71,7 +71,7 @@
         tagline: "Accorcio la distanza tra ciò che immaginiamo e ciò che usiamo.",
         projects: "Progetti", channelsCol: "Canali", more: "Altro",
         links: { storia: "Storia", note: "Note", formazione: "Formazione" },
-        rights: "© 2026 Mario Moschetta · Milano", built: "Costruito a Milano ⚡"
+        rights: "© 2026 Mario Moschetta · Milano · P.IVA 11422490968", built: "Costruito a Milano ⚡", privacy: "Privacy & cookie"
       }
     },
     en: {
@@ -130,7 +130,7 @@
         tagline: "I close the gap between what we imagine and what we actually use.",
         projects: "Projects", channelsCol: "Channels", more: "More",
         links: { storia: "Story", note: "Notes", formazione: "Teaching" },
-        rights: "© 2026 Mario Moschetta · Milan", built: "Built in Milan ⚡"
+        rights: "© 2026 Mario Moschetta · Milan · VAT 11422490968", built: "Built in Milan ⚡", privacy: "Privacy & cookies"
       }
     }
   };

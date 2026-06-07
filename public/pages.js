@@ -17,7 +17,7 @@
         tagline: "Accorcio la distanza tra ciò che immaginiamo e ciò che usiamo.",
         projects: "Progetti", channelsCol: "Canali", more: "Altro",
         links: { storia: "Storia", note: "Note", formazione: "Formazione" },
-        rights: "© 2026 Mario Moschetta · Milano", built: "Costruito a Milano ⚡"
+        rights: "© 2026 Mario Moschetta · Milano · P.IVA 11422490968", built: "Costruito a Milano ⚡", privacy: "Privacy & cookie"
       },
       storia: {
         eyebrow: "Storia", pathLabel: "il percorso", provenance: "Dove sono passato",
@@ -132,7 +132,7 @@
         tagline: "I close the gap between what we imagine and what we actually use.",
         projects: "Projects", channelsCol: "Channels", more: "More",
         links: { storia: "Story", note: "Notes", formazione: "Teaching" },
-        rights: "© 2026 Mario Moschetta · Milan", built: "Built in Milan ⚡"
+        rights: "© 2026 Mario Moschetta · Milan · VAT 11422490968", built: "Built in Milan ⚡", privacy: "Privacy & cookies"
       },
       storia: {
         eyebrow: "Story", pathLabel: "the path", provenance: "Where I've been",
@@ -244,6 +244,14 @@
   // ---- helpers ----
   function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
   var SPARK = '<svg viewBox="0 0 64 64" aria-hidden="true" style="width:.95em;height:.95em;display:inline-block;vertical-align:-0.08em"><path d="M37.5 6 L18 35.2 H30.2 L26 58 L47 27.5 H34.4 L37.5 6 Z" fill="currentColor"/></svg>';
+  // Brand icons inline (lucide ha rimosso le icone social brand)
+  var BRAND = {
+    tiktok: '<svg class="brand-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 1 1-2.59-2.59c.24 0 .48.03.71.1V9.7a5.68 5.68 0 1 0 4.97 5.64V8.99a7.34 7.34 0 0 0 4.28 1.37V7.27a4.28 4.28 0 0 1-3.22-1.45z"/></svg>',
+    instagram: '<svg class="brand-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor" stroke="none"/></svg>',
+    youtube: '<svg class="brand-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg>',
+    linkedin: '<svg class="brand-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56z"/></svg>',
+    spotify: '<svg class="brand-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm5.5 17.3a.75.75 0 0 1-1.03.25c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 1 1-.33-1.46c4.57-1.04 8.5-.59 11.66 1.34.36.22.47.69.25 1.03zm1.47-3.27a.94.94 0 0 1-1.29.31c-3.23-1.98-8.15-2.56-11.97-1.4a.94.94 0 1 1-.54-1.8c4.36-1.32 9.78-.68 13.49 1.6.44.27.58.85.31 1.29zm.13-3.4C15.3 8.4 9.4 8.2 5.83 9.28a1.12 1.12 0 1 1-.65-2.15c4.1-1.24 10.6-1 14.78 1.48a1.12 1.12 0 1 1-1.13 1.94z"/></svg>'
+  };
   function eyebrow(text, onInk) {
     return '<span class="mm-eyebrow' + (onInk ? ' mm-eyebrow--on-ink' : '') +
       '"><span style="color:var(--volt-500);display:inline-flex">' + SPARK + '</span>' + esc(text) + '</span>';
@@ -307,7 +315,9 @@
       '<div class="footer__col"><h4>' + esc(f.more) + '</h4>' +
       '<a href="storia.html">' + esc(f.links.storia) + '</a><a href="formazione.html">' + esc(f.links.formazione) + '</a>' +
       '<a href="note.html">' + esc(f.links.note) + '</a><a data-link="github" href="#">GitHub ↗</a></div></div>' +
-      '<div class="footer__bottom"><small>' + esc(f.rights) + '</small><small>' + esc(f.built) + '</small></div></div></footer>';
+      '<div class="footer__bottom"><small>' + esc(f.rights) + '</small>' +
+      '<small><a href="privacy.html">' + esc(f.privacy || "Privacy & cookie") + '</a></small>' +
+      '<small>' + esc(f.built) + '</small></div></div></footer>';
   }
 
   // ---- page bodies ----
@@ -432,29 +442,29 @@
 
   function canaliBody(t) {
     var c = t.canali;
-    function card(k, ic, title, sub, embed, linkKey, linkLabel) {
-      return '<div class="media-card"><span class="media-card__k"><i data-lucide="' + ic + '"></i> ' + esc(k) + '</span>' +
+    function card(k, iconHtml, title, sub, embed, linkKey, linkLabel) {
+      return '<div class="media-card"><span class="media-card__k">' + iconHtml + ' ' + esc(k) + '</span>' +
         '<h3 class="media-card__t">' + esc(title) + '</h3><p class="media-card__sub">' + esc(sub) + '</p>' + embed +
         '<div class="media-card__link"><a class="mm-outlink mm-outlink--on-ink" data-link="' + linkKey + '" href="#">' + esc(linkLabel) +
         ' <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div></div>';
     }
-    var spotifyEmbed = '<iframe class="media-embed media-embed--spotify" title="Thinking Forward — Spotify" src="https://open.spotify.com/embed/show/' + (L.SPOTIFY_SHOW_ID || "") + '?theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+    var spotifyEmbed = '<iframe class="media-embed media-embed--spotify mm-embed" title="Thinking Forward — Spotify" data-src="https://open.spotify.com/embed/show/' + (L.SPOTIFY_SHOW_ID || "") + '?theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
     var ytEmbed = '<button type="button" class="yt-facade media-embed" data-yt="XTHyW1TDOjw" aria-label="Riproduci il video YouTube" style="background-image:url(\'https://i.ytimg.com/vi/XTHyW1TDOjw/hqdefault.jpg\')"><span class="yt-facade__play"><i data-lucide="play"></i></span></button>';
-    var ttEmbed = '<div class="tt-card media-embed"><i data-lucide="music"></i><span>@mariomoschetta_</span></div>';
-    var igEmbed = '<div class="ig-card"><i data-lucide="instagram"></i><span>@mariomoschetta_</span></div>';
+    var ttEmbed = '<div class="tt-card media-embed">' + BRAND.tiktok + '<span>@mariomoschetta_</span></div>';
+    var igEmbed = '<div class="ig-card">' + BRAND.instagram + '<span>@mariomoschetta_</span></div>';
     return '<section class="section pagehead"><div class="wrap">' + eyebrow(c.eyebrow) +
       '<h1 class="pagehead__h">' + esc(c.h) + '</h1><p class="pagehead__lead">' + esc(c.lead) + '</p>' +
       '<p class="proofline" style="color:var(--text-faint);margin:var(--space-5) 0 0">' + esc(c.proof) + '</p></div></section>' +
       '<section class="section sec-ink"><div class="wrap">' +
-      '<div class="media-feature">' + card(c.podK, "mic", c.podT, c.podSub, spotifyEmbed, "spotify", c.podLink) + '</div>' +
-      '<div class="media-feature">' + card(c.ttK, "music", c.ttT, c.ttSub, ttEmbed, "tiktok", c.ttLink) + '</div>' +
-      '<div class="media-grid">' + card(c.ytK, "youtube", c.ytT, c.ytSub, ytEmbed, "youtube", c.ytLink) +
-      card(c.igK, "instagram", c.igT, c.igSub, igEmbed, "instagram", c.igLink) + '</div>' +
+      '<div class="media-feature">' + card(c.podK, '<i data-lucide="mic"></i>', c.podT, c.podSub, spotifyEmbed, "spotify", c.podLink) + '</div>' +
+      '<div class="media-feature">' + card(c.ttK, BRAND.tiktok, c.ttT, c.ttSub, ttEmbed, "tiktok", c.ttLink) + '</div>' +
+      '<div class="media-grid">' + card(c.ytK, BRAND.youtube, c.ytT, c.ytSub, ytEmbed, "youtube", c.ytLink) +
+      card(c.igK, BRAND.instagram, c.igT, c.igSub, igEmbed, "instagram", c.igLink) + '</div>' +
       '<div class="channels-strip"><span class="channels__title">' + esc(c.channelsH) + '</span><div class="channels-row">' +
-      '<a class="chan" data-link="tiktok" href="#"><i data-lucide="music"></i><span class="chan__name">TikTok</span><span class="chan__h">@mariomoschetta_</span></a>' +
-      '<a class="chan" data-link="instagram" href="#"><i data-lucide="instagram"></i><span class="chan__name">Instagram</span><span class="chan__h">@mariomoschetta_</span></a>' +
-      '<a class="chan" data-link="youtube" href="#"><i data-lucide="youtube"></i><span class="chan__name">YouTube</span><span class="chan__h">@MarioMoschetta</span></a>' +
-      '<a class="chan" data-link="linkedin" href="#"><i data-lucide="linkedin"></i><span class="chan__name">LinkedIn</span><span class="chan__h">in/mario-moschetta</span></a>' +
+      '<a class="chan" data-link="tiktok" href="#">' + BRAND.tiktok + '<span class="chan__name">TikTok</span><span class="chan__h">@mariomoschetta_</span></a>' +
+      '<a class="chan" data-link="instagram" href="#">' + BRAND.instagram + '<span class="chan__name">Instagram</span><span class="chan__h">@mariomoschetta_</span></a>' +
+      '<a class="chan" data-link="youtube" href="#">' + BRAND.youtube + '<span class="chan__name">YouTube</span><span class="chan__h">@MarioMoschetta</span></a>' +
+      '<a class="chan" data-link="linkedin" href="#">' + BRAND.linkedin + '<span class="chan__name">LinkedIn</span><span class="chan__h">in/mario-moschetta</span></a>' +
       '</div></div></div></section>';
   }
 
@@ -562,6 +572,7 @@
     }
 
     if (window.lucide) window.lucide.createIcons();
+    if (window.MM_gateEmbeds) window.MM_gateEmbeds();
   }
 
   function boot() {

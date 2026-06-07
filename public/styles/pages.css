@@ -182,3 +182,9 @@
 .ig-card i, .ig-card span, .tt-card i, .tt-card span { position: relative; z-index: 1; }
 .ig-card i, .tt-card i { width: 40px; height: 40px; }
 .ig-card span, .tt-card span { font-family: var(--font-mono); font-size: var(--fs-sm); }
+
+/* Brand icons inline (sostituiscono le icone social rimosse da lucide) */
+.brand-ic { display: inline-block; vertical-align: middle; flex: none; }
+.media-card__k .brand-ic { width: 15px; height: 15px; }
+.chan .brand-ic { width: 22px; height: 22px; color: var(--volt-500); }
+.ig-card .brand-ic, .tt-card .brand-ic { width: 40px; height: 40px; }
