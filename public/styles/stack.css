@@ -1,0 +1,97 @@
+/* ============================================================
+   STACK — scroll-stacking cards
+   Le schede figlie si impilano restando incollate sotto la navbar
+   mentre si scrolla (stile Apple/Stripe). 100% CSS, nessun JS.
+
+   Uso:  <div class="<sezione> stack">…schede…</div>
+   Varianti: .stack--numbered (numero gigante 01/02/03 in filigrana)
+             .stack--pillars / .stack--valori (tipografia ingrandita)
+
+   IMPORTANTE: questo file va caricato PER ULTIMO (dopo site.css e
+   pages.css) così le sue regole vincono la cascata sui contenitori
+   .cases/.steps/.valori senza bisogno di hack di specificità.
+   Richiede inoltre che nessun antenato sia uno scroll-container:
+   .site usa "overflow-x: clip" (non hidden) apposta.
+   ============================================================ */
+
+.stack {
+  display: block;
+  grid-template-columns: none;
+  margin-top: var(--space-8);
+  counter-reset: stackcard;
+  --stack-top: 96px;    /* offset sotto la navbar sticky */
+  --stack-peek: 16px;   /* sporgenza di ogni scheda sotto la successiva */
+}
+
+.stack > * {
+  position: sticky;
+  top: var(--stack-top);
+  counter-increment: stackcard;
+  min-height: min(70vh, 520px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(var(--space-6), 4vw, var(--space-8));
+  background-color: var(--surface-card);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: var(--space-7);
+  overflow: hidden;
+}
+.stack > *:last-child { margin-bottom: 0; }
+/* l'hover-lift della card interattiva sfalsa lo stack: lo annullo */
+.stack > *.mm-card--interactive:hover { transform: none; }
+
+/* offset incrementale: ogni scheda si ferma un filo più in basso,
+   lasciando sporgere quelle sotto come linguette */
+.stack > *:nth-child(2) { top: calc(var(--stack-top) + var(--stack-peek)); }
+.stack > *:nth-child(3) { top: calc(var(--stack-top) + var(--stack-peek) * 2); }
+.stack > *:nth-child(4) { top: calc(var(--stack-top) + var(--stack-peek) * 3); }
+.stack > *:nth-child(5) { top: calc(var(--stack-top) + var(--stack-peek) * 4); }
+
+/* — variante: numero gigante in filigrana (01/02/03…) — */
+.stack--numbered > *::after {
+  content: "0" counter(stackcard);
+  position: absolute;
+  top: clamp(var(--space-5), 4vw, var(--space-7));
+  right: clamp(var(--space-5), 4vw, var(--space-7));
+  font-family: var(--font-mono);
+  font-size: clamp(3.5rem, 2rem + 7vw, 7rem);
+  line-height: 1;
+  font-weight: var(--fw-semibold);
+  color: var(--volt-500);
+  opacity: 0.16;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* — HOME · pilastri (Costruisco / Insegno / Divulgo) — */
+.stack--pillars > .pillar h3 { font-size: var(--fs-h2); max-width: 18ch; }
+.stack--pillars > .pillar p  { font-size: var(--fs-lead); max-width: 46ch; line-height: var(--lh-snug); }
+.stack--pillars .pillar__ic { width: 58px; height: 58px; border-radius: 16px; }
+.stack--pillars .pillar__ic i { width: 28px; height: 28px; }
+
+/* — STORIA · valori — */
+.stack--valori > .valori__item { border-top: none; }
+.stack--valori > .valori__item h3 { font-size: var(--fs-h2); max-width: 16ch; }
+.stack--valori > .valori__item p  { font-size: var(--fs-lead); max-width: 46ch; line-height: var(--lh-snug); }
+
+/* — PROGETTI · case studies: conserva il layout interno a 2 colonne — */
+.cases.stack > .case {
+  display: grid;
+  align-items: center;
+}
+
+/* — AZIENDE · steps: il numero piccolo c'è già (.step-c__n) — */
+.steps.stack > .step-c { gap: var(--space-2); }
+
+/* ---- responsive ---- */
+@media (max-width: 820px) {
+  .stack { --stack-top: 80px; }
+  .stack > * { min-height: min(76vh, 480px); }
+}
+
+/* ---- accessibilità: niente scroll-stack se le animazioni sono off ---- */
+@media (prefers-reduced-motion: reduce) {
+  .stack > * { position: relative; top: auto; min-height: 0; }
+}

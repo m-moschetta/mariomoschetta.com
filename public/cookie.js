@@ -20,6 +20,25 @@
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
 
+  // ── Event tracking GA4 (no-op finché GA non è attivo dopo consenso) ──
+  function track(name, params) {
+    if (typeof window.gtag === "function") window.gtag("event", name, params || {});
+  }
+  window.MM_track = track;
+  var CONTACT = { whatsapp: 1, email: 1, call: 1 };
+  var SOCIAL = { spotify: 1, youtube: 1, tiktok: 1, instagram: 1, linkedin: 1, github: 1 };
+  var PROJECT = { fyblo: 1, pathway: 1, fatturai: 1, thinking: 1 };
+  function wireTracking() {
+    document.addEventListener("click", function (e) {
+      var a = e.target && e.target.closest && e.target.closest("[data-link]");
+      if (!a) return;
+      var key = a.getAttribute("data-link");
+      if (CONTACT[key]) track("contact", { method: key });
+      else if (SOCIAL[key]) track("social_click", { network: key });
+      else if (PROJECT[key]) track("project_click", { project: key });
+    });
+  }
+
   // Google Analytics 4 — caricato SOLO dopo consenso "all"
   function loadGA() {
     var id = (window.MM_LINKS && window.MM_LINKS.GA_ID) || "";
@@ -87,6 +106,7 @@
     buildBanner();
     if (!get()) showBanner();
     gateEmbeds();
+    wireTracking();
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();

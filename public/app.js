@@ -289,6 +289,7 @@
       btn.addEventListener("click", function () {
         var id = btn.getAttribute("data-yt");
         if (!id) return;
+        if (window.MM_track) window.MM_track("video_play", { provider: "youtube" });
         var f = document.createElement("iframe");
         f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
         f.title = "YouTube — Mario Moschetta";

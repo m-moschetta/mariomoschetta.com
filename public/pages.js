@@ -472,6 +472,7 @@
     (root || document).querySelectorAll(".yt-facade").forEach(function (btn) {
       btn.addEventListener("click", function () {
         var id = btn.getAttribute("data-yt"); if (!id) return;
+        if (window.MM_track) window.MM_track("video_play", { provider: "youtube" });
         var f = document.createElement("iframe");
         f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
         f.title = "YouTube — Mario Moschetta";
@@ -561,6 +562,7 @@
           : "Ciao Mario, aggiungimi alla tua newsletter.\nLa mia email: ") + email;
         window.location.href = "mailto:mario@mariomoschetta.com?subject=" +
           encodeURIComponent(subj) + "&body=" + encodeURIComponent(body);
+        if (window.MM_track) window.MM_track("newsletter_submit");
         document.getElementById("nl-hint").textContent = n.newsletterThanks;
         form.querySelector("input").value = "";
       });

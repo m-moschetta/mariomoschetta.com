@@ -74,64 +74,7 @@
 .pillar__ic { width: 46px; height: 46px; border-radius: 12px; background: var(--ink-900); color: var(--volt-500); display: flex; align-items: center; justify-content: center; }
 .pillar__ic i { width: 22px; height: 22px; }
 @media (max-width: 820px) { .pillars { grid-template-columns: 1fr; } }
-
-/* ---------- Scroll-stack: le 3 schede si impilano scrollando ---------- */
-.pillars--stack {
-  display: block;
-  grid-template-columns: none;
-  margin-top: var(--space-8);
-  counter-reset: pillar;
-  --stack-top: 96px;   /* sotto la navbar sticky */
-  --stack-peek: 16px;  /* quanto sporge ogni scheda sotto */
-}
-.pillars--stack .pillar {
-  position: sticky;
-  top: var(--stack-top);
-  counter-increment: pillar;
-  min-height: min(72vh, 540px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: clamp(var(--space-6), 5vw, var(--space-8));
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
-  margin-bottom: var(--space-7);
-  overflow: hidden;
-}
-.pillars--stack .pillar:last-child { margin-bottom: 0; }
-/* offset incrementale: le precedenti restano visibili come linguette */
-.pillars--stack .pillar:nth-child(2) { top: calc(var(--stack-top) + var(--stack-peek)); }
-.pillars--stack .pillar:nth-child(3) { top: calc(var(--stack-top) + var(--stack-peek) * 2); }
-/* numero in filigrana, generato dal counter */
-.pillars--stack .pillar::after {
-  content: "0" counter(pillar);
-  position: absolute;
-  top: clamp(var(--space-5), 4vw, var(--space-7));
-  right: clamp(var(--space-5), 4vw, var(--space-7));
-  font-family: var(--font-mono);
-  font-size: clamp(3.5rem, 2rem + 7vw, 7rem);
-  line-height: 1;
-  font-weight: var(--fw-semibold);
-  color: var(--volt-500);
-  opacity: 0.16;
-  pointer-events: none;
-  user-select: none;
-}
-.pillars--stack .pillar h3 { font-size: var(--fs-h2); max-width: 18ch; }
-.pillars--stack .pillar p { font-size: var(--fs-lead); max-width: 46ch; line-height: var(--lh-snug); }
-.pillars--stack .pillar__ic { width: 58px; height: 58px; border-radius: 16px; }
-.pillars--stack .pillar__ic i { width: 28px; height: 28px; }
-/* l'hover-lift della card interattiva confonde lo stack: lo annullo */
-.pillars--stack .pillar.mm-card--interactive:hover { transform: none; }
-
-@media (max-width: 820px) {
-  .pillars--stack .pillar { min-height: min(76vh, 480px); }
-  .pillars--stack { --stack-top: 80px; }
-}
-/* rispetta chi ha disattivato le animazioni: torno al flusso normale */
-@media (prefers-reduced-motion: reduce) {
-  .pillars--stack .pillar { position: static; min-height: 0; }
-}
+/* Lo scroll-stack dei pilastri vive ora in styles/stack.css (utility .stack) */
 
 /* ---------- Progetti ---------- */
 .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-5); margin-top: var(--space-7); }
