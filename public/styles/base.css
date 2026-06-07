@@ -1,0 +1,64 @@
+/* ============================================================
+   BASE — element defaults for Mario Moschetta system.
+   Opt-in: pages link styles.css and inherit a warm editorial base.
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-body);
+  font-weight: var(--fw-regular);
+  color: var(--text-body);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--text-strong);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display);
+  margin: 0 0 0.4em;
+  text-wrap: balance;
+}
+h1 { font-size: var(--fs-h1); letter-spacing: var(--ls-mega); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); letter-spacing: var(--ls-snug); }
+
+p { margin: 0 0 1em; max-width: var(--measure); text-wrap: pretty; }
+
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+
+strong, b { font-weight: var(--fw-semibold); color: var(--text-strong); }
+
+/* Mono eyebrow / kicker — recurring builder accent */
+.mm-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* The ⚡ spark mark helper */
+.mm-spark { color: var(--accent); }
+
+::selection { background: var(--volt-500); color: var(--ink-950); }
+
+:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; border-radius: var(--radius-xs); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}

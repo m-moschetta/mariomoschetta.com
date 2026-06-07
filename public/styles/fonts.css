@@ -1,0 +1,41 @@
+/* ============================================================
+   FONTS — Mario Moschetta personal brand
+   Self-hosted woff2 (latin subset, incl. Italian accents).
+   Bricolage Grotesque & Hanken Grotesk are VARIABLE fonts:
+   one file each, weight axis 400–800.
+   ============================================================ */
+
+/* Display — characterful modern grotesque. Headlines, the "Apripista" voice. */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  font-style: normal;
+  font-weight: 400 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("../fonts/BricolageGrotesque-400.woff2") format("woff2");
+}
+
+/* Body — humanist sans, warm + highly legible. Running text, UI. */
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("../fonts/HankenGrotesk-400.woff2") format("woff2");
+}
+
+/* Mono — builder/technical accent. Eyebrows, labels, code, the ⚡ marks. */
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/SpaceMono-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/SpaceMono-700.woff2") format("woff2");
+}

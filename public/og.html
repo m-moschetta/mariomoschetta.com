@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles/fonts.css">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  .card {
+    width: 1200px; height: 630px; background: #0B0F1A; color: #F3F1EA;
+    position: relative; display: flex; align-items: center; padding: 84px;
+    font-family: "Hanken Grotesk", system-ui, sans-serif;
+  }
+  .card::before { content: ""; position: absolute; inset: 0;
+    background: radial-gradient(120% 80% at 18% 0%, rgba(200,255,61,0.12), transparent 55%); }
+  .spark { position: absolute; top: 60px; left: 84px; }
+  .left { flex: 1; position: relative; z-index: 1; }
+  .ey { font-family: "Space Mono", monospace; font-size: 22px; letter-spacing: .18em;
+    text-transform: uppercase; color: #8088A0; margin-bottom: 26px; }
+  h1 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 116px; font-weight: 700;
+    letter-spacing: -.02em; line-height: .92; margin-bottom: 30px; }
+  .tag { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 33px; font-weight: 500;
+    line-height: 1.2; max-width: 17ch; color: #AEB4C6; }
+  .tag b { color: #C8FF3D; font-weight: 600; }
+  .photo { width: 300px; height: 392px; border-radius: 26px; object-fit: cover;
+    object-position: 42% 38%; margin-left: 56px; border: 1px solid #2B3247; position: relative; z-index: 1; }
+  .line { position: absolute; left: 0; right: 0; bottom: 0; height: 7px;
+    background: linear-gradient(90deg, #0B0F1A, #C8FF3D); }
+</style>
+</head>
+<body>
+<div class="card">
+  <svg class="spark" width="42" height="42" viewBox="0 0 64 64" aria-hidden="true"><path d="M37.5 6 L18 35.2 H30.2 L26 58 L47 27.5 H34.4 L37.5 6 Z" fill="#C8FF3D"/></svg>
+  <div class="left">
+    <div class="ey">mariomoschetta.com</div>
+    <h1>Mario<br>Moschetta</h1>
+    <div class="tag">Accorcio la distanza tra ciò che immaginiamo e <b>ciò che usiamo.</b></div>
+  </div>
+  <img class="photo" src="assets/mario-home.jpg" alt="">
+  <div class="line"></div>
+</div>
+</body>
+</html>

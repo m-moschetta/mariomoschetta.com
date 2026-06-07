@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+
+# Tooling / locale
+.vercel/
+.claude/
+node_modules/
+
+# Materiali privati — NON pubblicare
+# (brief strategico, copy interno, foto originali ad alta risoluzione, loghi sorgente)
+_photos-src/

@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mario Moschetta — Accorcio la distanza tra ciò che immaginiamo e ciò che usiamo</title>
+  <meta name="description" content="Mario Moschetta: vedo dove sta andando il mondo un po' prima, e faccio in modo che le cose nuove arrivino davvero alle persone. Costruisco software con Thinking, insegno, divulgo la tecnologia. Podcast Thinking Forward.">
+  <meta name="author" content="Mario Moschetta">
+  <link rel="canonical" href="https://mariomoschetta.com/">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mario Moschetta">
+  <meta property="og:title" content="Mario Moschetta">
+  <meta property="og:description" content="Accorcio la distanza tra ciò che immaginiamo e ciò che usiamo. Costruisco, insegno, divulgo. Podcast Thinking Forward.">
+  <meta property="og:url" content="https://mariomoschetta.com/">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://mariomoschetta.com/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mariomoschetta.com/assets/og.jpg">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/BricolageGrotesque-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/HankenGrotesk-400.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Design system tokens (linkati direttamente: niente @import, robusto in ogni anteprima) -->
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/colors.css">
+  <link rel="stylesheet" href="styles/typography.css">
+  <link rel="stylesheet" href="styles/spacing.css">
+  <link rel="stylesheet" href="styles/effects.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/site.css?v=2">
+</head>
+<body>
+<div class="site">
+
+  <!-- ============================ SOGLIA / HERO ============================ -->
+  <header class="soglia" id="soglia">
+    <div class="soglia__line"></div>
+    <div class="soglia__node"></div>
+
+    <nav class="nav">
+      <div class="wrap nav__inner">
+        <a class="mm-logo mm-logo--on-ink" href="#soglia" style="font-size:1.32rem" aria-label="Mario Moschetta">
+          <svg class="mm-logo__spark" viewBox="0 0 64 64" aria-hidden="true"><path d="M37.5 6 L18 35.2 H30.2 L26 58 L47 27.5 H34.4 L37.5 6 Z" fill="var(--volt-500)"/></svg>
+          <span>Mario&nbsp;<span class="mm-logo__sur">Moschetta</span></span>
+        </a>
+        <div class="nav__links">
+          <a class="nav__link" href="storia.html" data-i18n="nav.storia">Storia</a>
+          <a class="nav__link" href="progetti.html" data-i18n="nav.progetti">Progetti</a>
+          <a class="nav__link" href="aziende.html" data-i18n="nav.aziende">Aziende</a>
+          <a class="nav__link" href="formazione.html" data-i18n="nav.formazione">Formazione</a>
+          <a class="nav__link" href="note.html" data-i18n="nav.note">Note</a>
+        </div>
+        <div class="nav__right">
+          <span class="lang">
+            <button aria-pressed="true" data-lang="it">IT</button>
+            <span>/</span>
+            <button aria-pressed="false" data-lang="en">EN</button>
+          </span>
+          <a class="mm-btn mm-btn--primary mm-btn--sm" data-link="whatsapp" href="#" target="_blank" rel="noopener">
+            <i data-lucide="message-circle" aria-hidden="true"></i><span data-i18n="cta">Scrivimi</span>
+          </a>
+          <button class="burger" id="nav-burger" aria-label="Menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="navmenu" id="navmenu" aria-hidden="true">
+      <div class="navmenu__top wrap">
+        <span class="mm-logo mm-logo--on-ink" style="font-size:1.3rem" aria-label="Mario Moschetta">
+          <svg class="mm-logo__spark" viewBox="0 0 64 64" aria-hidden="true"><path d="M37.5 6 L18 35.2 H30.2 L26 58 L47 27.5 H34.4 L37.5 6 Z" fill="var(--volt-500)"/></svg>
+          <span>Mario&nbsp;<span class="mm-logo__sur">Moschetta</span></span>
+        </span>
+        <button class="navmenu__close" id="nav-close" aria-label="Chiudi"><i data-lucide="x"></i></button>
+      </div>
+      <nav class="navmenu__links wrap">
+        <a href="storia.html" data-i18n="nav.storia">Storia</a>
+        <a href="progetti.html" data-i18n="nav.progetti">Progetti</a>
+        <a href="aziende.html" data-i18n="nav.aziende">Aziende</a>
+        <a href="formazione.html" data-i18n="nav.formazione">Formazione</a>
+        <a href="note.html" data-i18n="nav.note">Note</a>
+      </nav>
+      <div class="navmenu__foot wrap">
+        <span class="lang">
+          <button aria-pressed="true" data-lang="it">IT</button>
+          <span>/</span>
+          <button aria-pressed="false" data-lang="en">EN</button>
+        </span>
+        <a class="mm-btn mm-btn--primary mm-btn--sm" data-link="whatsapp" href="#" target="_blank" rel="noopener">
+          <i data-lucide="message-circle" aria-hidden="true"></i><span data-i18n="cta">Scrivimi</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="wrap soglia__body">
+      <h1 class="quote quote--statement">
+        <span data-i18n="soglia.statementPre">Accorcio la distanza tra ciò che immaginiamo e </span><span class="q" data-i18n="soglia.statementEm">ciò che usiamo.</span>
+      </h1>
+      <p class="soglia__olivetti">
+        <span data-i18n="soglia.olivetti">«Un sogno sembra un sogno fino a quando non si comincia a lavorarci.»</span>
+        <span class="quote__by">— <span data-i18n="soglia.by">Adriano Olivetti</span></span>
+      </p>
+    </div>
+
+    <div class="wrap soglia__foot">
+      <span class="scrollcue"><span data-i18n="soglia.cue">Continua</span> <i data-lucide="arrow-down"></i></span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================ APERTURA ============================ -->
+    <section class="section" id="apertura">
+      <div class="wrap apertura__grid">
+        <div class="apertura__body">
+          <div class="eyebrow-row">
+            <span class="mm-eyebrow">
+              <span style="color:var(--volt-500);display:inline-flex"><svg class="mm-eyebrow__spark" width="0.95em" height="0.95em" viewBox="0 0 64 64" aria-hidden="true" style="display:inline-block;vertical-align:-0.08em"><path d="M37.5 6 L18 35.2 H30.2 L26 58 L47 27.5 H34.4 L37.5 6 Z" fill="currentColor"/></svg></span>
+              <span data-i18n="apertura.eyebrow">Chi sono</span><span aria-hidden="true">·&nbsp;01</span>
+            </span>
+          </div>
+          <h2 class="h-lead apertura__h" data-i18n="apertura.h">Vedo l'orizzonte prima che diventi strada.</h2>
+          <p data-i18n="apertura.p">Vedo dove sta andando il mondo un po' prima degli altri. La parte che mi interessa, però, è quella dopo: fare in modo che le cose nuove arrivino davvero alle persone.</p>
+        </div>
+        <div>
+          <img class="portrait" src="assets/mario-home.jpg" alt="Mario a New York, davanti allo skyline di Manhattan" loading="lazy" style="object-position:42% 38%">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PERCORSO ============================ -->
+    <section class="section sec-ink" id="percorso">
+      <div class="wrap--narrow">
+        <div class="eyebrow-row">
+          <span class="mm-eyebrow mm-eyebrow--on-ink">
+            <span style="color:var(--volt-500);display:inline-flex"><svg class="mm-eyebrow__spark" width="0.95em" height="0.95em" viewBox="0 0 64 64" aria-hidden="true" style="display:inline-block;vertical-align:-0.08em"><path d="M37.5 6 L18 35.2 H30.2 L26 58 L47 27.5 H34.4 L37.5 6 Z" fill="currentColor"/></svg></span>
+            <span data-i18n="percorso.eyebrow">Il percorso</span><span aria-hidden="true">·&nbsp;02</span>
+          </span>
+        </div>
+        <div class="road" id="road">
+          <div class="beat">
+            <span class="beat__node"></span>
+            <h3 class="beat__h">Primo: capire come funzionano le persone.</h3>
+            <p class="beat__body">Ho studiato marketing perché volevo capire una cosa sola: perché le persone scelgono ciò che scelgono. Se avessi voluto solo costruire, <b>avrei fatto ingegneria</b>.</p>
+          </div>
+          <div class="beat">
+            <span class="beat__node"></span>
+            <h3 class="beat__h">Poi ho costruito.</h3>
+            <p class="beat__body">Nel 2021 ho co-fondato Fyblo, una fintech che portava gli strumenti finanziari sulla blockchain. Un'idea che in pochi, allora, pensavano avesse senso. L'abbiamo costruita davvero — piattaforma, un wallet conforme a eIDAS, le prime tokenizzazioni — e a crederci sono stati investitori e istituzioni come <b>Banca d'Italia e Credem</b>. Nel 2025 il progetto è proseguito con Add Value.</p>
+          </div>
+          <div class="beat">
+            <span class="beat__node"></span>
+            <h3 class="beat__h">Soprattutto, ho imparato a portare le cose a un mercato più ampio.</h3>
+            <p class="beat__body">In Pathway ho fatto crescere un prodotto edtech fino a <b>migliaia di persone</b>, con partner come Mondadori e il British Council. Perché un'idea, per contare, deve arrivare a chi la userà.</p>
+          </div>
+          <div class="beat">
+            <span class="beat__node"></span>
+            <h3 class="beat__h">Oggi.</h3>
+            <p class="beat__body">Con <b>Thinking</b> costruisco software per chi ha qualcosa di nuovo da portare nel mondo. E con <b>Fatturai</b> lo faccio per me.</p>
+          </div>
+        </div>
+        <div class="road__more">
+          <a class="mm-outlink mm-outlink--on-ink" href="#progetti"><span data-i18n="percorso.link">Il percorso, per intero</span> <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ COSA FACCIO ============================ -->
+    <section class="section" id="cosa">
+      <div class="wrap">
+        <div class="eyebrow-row">
+          <span class="mm-eyebrow">
+            <span style="color:var(--volt-500);display:inline-flex"><svg class="mm-eyebrow__spark" width="0.95em" height="0.95em" viewBox="0 0 64 64" aria-hidden="true" style="display:inline-block;vertical-align:-0.08em"><path d="M37.5 6 L18 35.2 H30.2 L26 58 L47 27.5 H34.4 L37.5 6 Z" fill="currentColor"/></svg></span>
+            <span data-i18n="cosa.eyebrow">Cosa faccio oggi</span><span aria-hidden="true">·&nbsp;03</span>
+          </span>
+        </div>
+        <h2 class="h-lead" data-i18n="cosa.h">Tre verbi. Una persona sola dietro.</h2>
+        <div class="pillars" id="pillars">
+          <div class="mm-card mm-card--interactive pillar">
+            <span class="pillar__ic"><i data-lucide="code-xml"></i></span>
+            <h3>Costruisco</h3>
+            <p>Software, app e SaaS per chi ha un'idea nuova da portare sul mercato.</p>
+            <a class="mm-outlink" data-link="thinking" href="#">Thinking <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="mm-card mm-card--interactive pillar">
+            <span class="pillar__ic"><i data-lucide="graduation-cap"></i></span>
+            <h3>Insegno</h3>
+            <p>Porto le tecnologie che stanno cambiando il lavoro — l'AI in testa — a professionisti e aziende. Al Talent Garden e oltre.</p>
+            <a class="mm-outlink" href="#cosa">La formazione <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="mm-card mm-card--interactive pillar">
+            <span class="pillar__ic"><i data-lucide="radio"></i></span>
+            <h3>Divulgo</h3>
+            <p>Racconto la tecnologia a una community di oltre 20.000 persone. Ogni giorno, con parole semplici.</p>
+            <a class="mm-outlink" href="#racconto">I canali <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PROGETTI ============================ -->
+    <section class="section sec-sand" id="progetti">
+      <div class="wrap">
+        <div class="eyebrow-row">
+          <span class="mm-eyebrow">
+            <span style="color:var(--volt-500);display:inline-flex"><svg class="mm-eyebrow__spark" width="0.95em" height="0.95em" viewBox="0 0 64 64" aria-hidden="true" style="display:inline-block;vertical-align:-0.08em"><path d="M37.5 6 L18 35.2 H30.2 L26 58 L47 27.5 H34.4 L37.5 6 Z" fill="currentColor"/></svg></span>
+            <span data-i18n="progetti.eyebrow">Le cose che ho costruito</span><span aria-hidden="true">·&nbsp;04</span>
+          </span>
+        </div>
+        <p class="projlead" data-i18n="progetti.lead">Ogni progetto qui è partito da un'intuizione che sembrava in anticipo. Oggi è qualcosa che esiste, e che qualcuno usa.</p>
+        <ol class="projlist" id="projlist">
+          <li class="projitem"><a data-link="fyblo" href="#" class="projitem__link"><span class="projitem__name">Fyblo</span><span class="projitem__meta">Fintech · 2021—2025</span><i data-lucide="arrow-up-right"></i></a></li>
+          <li class="projitem"><a data-link="pathway" href="#" class="projitem__link"><span class="projitem__name">Pathway</span><span class="projitem__meta">Growth · edtech</span><i data-lucide="arrow-up-right"></i></a></li>
+          <li class="projitem"><a data-link="fatturai" href="#" class="projitem__link"><span class="projitem__name">Fatturai</span><span class="projitem__meta">SaaS · live</span><i data-lucide="arrow-up-right"></i></a></li>
+          <li class="projitem"><a data-link="thinking" href="#" class="projitem__link"><span class="projitem__name">Lavori su misura</span><span class="projitem__meta">con Thinking</span><i data-lucide="arrow-up-right"></i></a></li>
+        </ol>
+        <div class="projlist__more">
+          <a class="mm-outlink" data-link="thinking" href="#" data-i18n="progetti.link">Apri i progetti <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ RACCONTO / CANALI ============================ -->
+    <section class="section sec-ink" id="racconto">
+      <div class="wrap">
+        <div class="eyebrow-row">
+          <span class="mm-eyebrow mm-eyebrow--on-ink">
+            <span style="color:var(--volt-500);display:inline-flex"><svg class="mm-eyebrow__spark" width="0.95em" height="0.95em" viewBox="0 0 64 64" aria-hidden="true" style="display:inline-block;vertical-align:-0.08em"><path d="M37.5 6 L18 35.2 H30.2 L26 58 L47 27.5 H34.4 L37.5 6 Z" fill="currentColor"/></svg></span>
+            <span data-i18n="racconto.eyebrow">Racconto</span><span aria-hidden="true">·&nbsp;05</span>
+          </span>
+        </div>
+        <div class="canali__grid">
+          <div>
+            <p class="lead-p racconto__lead" data-i18n="racconto.lead">Racconto la tecnologia mentre la attraverso. Niente hype: solo come funziona davvero ciò che ci ritroveremo tra le mani.</p>
+            <p class="proofline" data-i18n="racconto.proof">Oltre 20.000 persone · 1.7M visualizzazioni</p>
+            <div class="podcast">
+              <div class="podcast__art"><i data-lucide="mic" style="width:30px;height:30px;color:var(--volt-500);position:relative;z-index:1"></i></div>
+              <div class="podcast__meta">
+                <span class="podcast__k" data-i18n="racconto.podK">Podcast · settimanale</span>
+                <h3 class="podcast__t" data-i18n="racconto.podT">Thinking Forward</h3>
+                <span class="podcast__sub" data-i18n="racconto.podSub">Il podcast che conduco con Giancarlo. Spotify + YouTube.</span>
+              </div>
+              <a class="playbtn" data-link="spotify" href="#" target="_blank" rel="noopener" aria-label="Ascolta Thinking Forward su Spotify"><i data-lucide="play"></i></a>
+            </div>
+            <div class="podcast__embed" id="podcast-embed" hidden></div>
+            <div class="podcast__link">
+              <a class="mm-outlink mm-outlink--on-ink" data-link="spotify" href="#" target="_blank" rel="noopener" data-i18n="racconto.podLink">Ascolta l'ultima puntata <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="channels">
+            <span class="channel__h channels__title" data-i18n="racconto.channelsH">Dove mi trovi</span>
+            <a class="channel" data-link="tiktok" href="#" target="_blank" rel="noopener"><i data-lucide="music"></i><span class="channel__name">TikTok</span><span class="channel__h">@mariomoschetta_</span><i data-lucide="arrow-up-right" style="width:15px;height:15px"></i></a>
+            <a class="channel" data-link="instagram" href="#" target="_blank" rel="noopener"><i data-lucide="camera"></i><span class="channel__name">Instagram</span><span class="channel__h">@mariomoschetta_</span><i data-lucide="arrow-up-right" style="width:15px;height:15px"></i></a>
+            <a class="channel" data-link="youtube" href="#" target="_blank" rel="noopener"><i data-lucide="play"></i><span class="channel__name">YouTube</span><span class="channel__h">@MarioMoschetta</span><i data-lucide="arrow-up-right" style="width:15px;height:15px"></i></a>
+            <a class="channel" data-link="linkedin" href="#" target="_blank" rel="noopener"><i data-lucide="briefcase"></i><span class="channel__name">LinkedIn</span><span class="channel__h">in/mario-moschetta</span><i data-lucide="arrow-up-right" style="width:15px;height:15px"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CONTATTO ============================ -->
+    <section class="section" id="contatto">
+      <div class="wrap--narrow contatto">
+        <h2 data-i18n="contatto.h">Se quello che faccio ti somiglia, scrivimi.</h2>
+        <p data-i18n="contatto.p">Due righe, senza impegno. Ti rispondo io.</p>
+        <a class="mm-btn mm-btn--primary mm-btn--lg" data-link="whatsapp" href="#" target="_blank" rel="noopener">
+          <i data-lucide="message-circle" aria-hidden="true"></i><span data-i18n="cta">Scrivimi</span>
+        </a>
+        <div class="cta-alt">
+          <a data-link="email" href="#">Email</a>
+          <span aria-hidden="true">·</span>
+          <a data-link="call" href="#" target="_blank" rel="noopener" data-i18n="contatto.call">Prenota una call</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div style="max-width:30ch">
+          <span class="mm-logo mm-logo--on-ink" style="font-size:1.3rem" aria-label="Mario Moschetta">
+            <svg class="mm-logo__spark" viewBox="0 0 64 64" aria-hidden="true"><path d="M37.5 6 L18 35.2 H30.2 L26 58 L47 27.5 H34.4 L37.5 6 Z" fill="var(--volt-500)"/></svg>
+            <span>Mario&nbsp;<span class="mm-logo__sur">Moschetta</span></span>
+          </span>
+          <p style="margin-top:14px;font-size:var(--fs-sm);color:var(--ink-300);line-height:1.5" data-i18n="footer.tagline">Accorcio la distanza tra ciò che immaginiamo e ciò che usiamo.</p>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.projects">Progetti</h4>
+          <a data-link="thinking" href="#">Thinking S.R.L. ↗</a>
+          <a data-link="fatturai" href="#">Fatturai ↗</a>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.channelsCol">Canali</h4>
+          <a data-link="spotify" href="#" target="_blank" rel="noopener">Spotify</a>
+          <a data-link="youtube" href="#" target="_blank" rel="noopener">YouTube</a>
+          <a data-link="tiktok" href="#" target="_blank" rel="noopener">TikTok</a>
+          <a data-link="instagram" href="#" target="_blank" rel="noopener">Instagram</a>
+          <a data-link="linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.more">Altro</h4>
+          <a href="storia.html" data-i18n="footer.links.storia">Storia</a>
+          <a href="formazione.html" data-i18n="footer.links.formazione">Formazione</a>
+          <a href="note.html" data-i18n="footer.links.note">Note</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <small data-i18n="footer.rights">© 2026 Mario Moschetta · Milano</small>
+        <small data-i18n="footer.built">Costruito a Milano ⚡</small>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="links.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

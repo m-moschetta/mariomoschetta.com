@@ -1,0 +1,50 @@
+/* ============================================================
+   TYPOGRAPHY — Mario Moschetta
+   Display: Bricolage Grotesque (characterful grotesque)
+   Body:    Hanken Grotesk (humanist sans, warm + legible)
+   Mono:    Space Mono (builder/technical accents, eyebrows)
+   Editorial scale — big confident titles, calm reading body.
+   Size tokens live in the --fs-* namespace (kept distinct from
+   the --text-* SEMANTIC COLOR aliases in colors.css).
+   ============================================================ */
+:root {
+  /* ---- Families ---- */
+  --font-display: "Bricolage Grotesque", "Hanken Grotesk", system-ui, sans-serif;
+  --font-body:    "Hanken Grotesk", system-ui, -apple-system, Segoe UI, sans-serif;
+  --font-mono:    "Space Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ---- Weights ---- */
+  --fw-regular: 400;  /* @kind other */
+  --fw-medium:  500;  /* @kind other */
+  --fw-semibold:600;  /* @kind other */
+  --fw-bold:    700;  /* @kind other */
+  --fw-black:   800;  /* @kind other */
+
+  /* ---- Type size scale (fluid, editorial) ---- */
+  --fs-mega:  clamp(3.5rem, 1.5rem + 8vw, 7.5rem);   /* @kind other */
+  --fs-h1:    clamp(2.75rem, 1.6rem + 4.6vw, 5rem);  /* @kind other */
+  --fs-h2:    clamp(2.1rem, 1.4rem + 2.9vw, 3.4rem); /* @kind other */
+  --fs-h3:    clamp(1.6rem, 1.2rem + 1.6vw, 2.25rem); /* @kind other */
+  --fs-h4:    clamp(1.3rem, 1.1rem + 0.9vw, 1.6rem); /* @kind other */
+  --fs-lead:  clamp(1.2rem, 1.05rem + 0.7vw, 1.5rem); /* @kind other */
+  --fs-body-lg: 1.1875rem;  /* 19px — primary reading size */
+  --fs-body:    1.0625rem;  /* 17px */
+  --fs-sm:      0.9375rem;  /* 15px */
+  --fs-xs:      0.8125rem;  /* 13px */
+  --fs-eyebrow: 0.78125rem; /* 12.5px — mono labels */
+
+  /* ---- Line heights ---- */
+  --lh-tight:   1.04;  /* @kind other */
+  --lh-display: 1.08;  /* @kind other */
+  --lh-snug:    1.28;  /* @kind other */
+  --lh-body:    1.62;  /* @kind other */
+  --lh-relaxed: 1.75;  /* @kind other */
+
+  /* ---- Letter spacing ---- */
+  --ls-mega:    -0.03em;  /* @kind other */
+  --ls-display: -0.02em;  /* @kind other */
+  --ls-snug:    -0.01em;  /* @kind other */
+  --ls-normal:  0;        /* @kind other */
+  --ls-eyebrow: 0.18em;   /* @kind other */
+  --ls-wide:    0.04em;   /* @kind other */
+}

@@ -1,0 +1,131 @@
+/* ============================================================
+   COMPONENT STYLES — Mario Moschetta
+   Shipped to consumers via styles.css. Class-based so primitives
+   get real hover / focus / press states.
+   ============================================================ */
+
+/* ---------- Button ---------- */
+.mm-btn {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-body);
+  line-height: 1;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.55em;
+  padding: 0.85em 1.4em;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid transparent;
+  background: var(--ink-900); color: var(--text-on-ink);
+  cursor: pointer; text-decoration: none; white-space: nowrap;
+  transition: transform var(--dur-fast) var(--ease-out),
+              background-color var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out),
+              border-color var(--dur-base) var(--ease-out);
+}
+.mm-btn:hover { transform: translateY(-1px); }
+.mm-btn:active { transform: translateY(0) scale(0.985); }
+.mm-btn:disabled, .mm-btn[aria-disabled="true"] { opacity: 0.45; pointer-events: none; transform: none; }
+.mm-btn svg { width: 1.15em; height: 1.15em; stroke-width: 2.25; }
+
+.mm-btn--primary { background: var(--volt-500); color: var(--ink-950); }
+.mm-btn--primary:hover { background: var(--volt-400); box-shadow: var(--glow-volt-soft); }
+.mm-btn--ink { background: var(--ink-900); color: var(--text-on-ink); }
+.mm-btn--ink:hover { background: var(--ink-800); box-shadow: var(--shadow-md); }
+.mm-btn--secondary { background: transparent; color: var(--warm-900); border-color: var(--border-strong); }
+.mm-btn--secondary:hover { border-color: var(--warm-900); background: var(--paper-100); }
+.mm-btn--ghost { background: transparent; color: var(--warm-800); border-color: transparent; padding-left: 0.6em; padding-right: 0.6em; }
+.mm-btn--ghost:hover { color: var(--warm-900); background: var(--paper-100); }
+/* on dark surfaces */
+.mm-btn--on-ink.mm-btn--secondary { color: var(--text-on-ink); border-color: var(--ink-600); }
+.mm-btn--on-ink.mm-btn--secondary:hover { border-color: var(--ink-300); background: var(--ink-800); }
+.mm-btn--on-ink.mm-btn--ghost { color: var(--ink-200); }
+.mm-btn--on-ink.mm-btn--ghost:hover { color: var(--text-on-ink); background: var(--ink-800); }
+
+.mm-btn--sm { font-size: var(--fs-sm); padding: 0.62em 1.05em; }
+.mm-btn--lg { font-size: var(--fs-body-lg); padding: 1em 1.7em; }
+.mm-btn--block { display: flex; width: 100%; }
+
+/* ---------- Tag / proof chip ---------- */
+.mm-tag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.02em;
+  color: var(--warm-800);
+  background: var(--paper-100);
+  border: 1px solid var(--border);
+  padding: 0.32em 0.7em;
+  border-radius: var(--radius-sm);
+  display: inline-flex; align-items: center; gap: 0.45em; white-space: nowrap;
+}
+.mm-tag--accent { color: var(--volt-900); background: var(--volt-wash); border-color: var(--volt-400); }
+.mm-tag--ink { color: var(--text-on-ink-muted); background: var(--ink-800); border-color: var(--ink-600); }
+.mm-tag svg { width: 0.95em; height: 0.95em; }
+
+/* ---------- Eyebrow / kicker ---------- */
+.mm-eyebrow--accent { color: var(--volt-900); }
+.mm-eyebrow .mm-eyebrow__spark { width: 0.95em; height: 0.95em; display: inline-block; }
+.mm-eyebrow--on-ink { color: var(--ink-300); }
+
+/* ---------- Stat ---------- */
+.mm-stat { display: flex; flex-direction: column; gap: 0.2em; }
+.mm-stat__num {
+  font-family: var(--font-mono); font-weight: var(--fw-bold);
+  font-size: clamp(1.9rem, 1.2rem + 2vw, 2.9rem);
+  letter-spacing: -0.02em; line-height: 1; color: var(--text-strong);
+}
+.mm-stat__num .mm-stat__unit { color: var(--volt-700); }
+.mm-stat__label { font-size: var(--fs-sm); color: var(--text-muted); max-width: 22ch; line-height: 1.35; }
+.mm-stat--on-ink .mm-stat__num { color: var(--text-on-ink); }
+.mm-stat--on-ink .mm-stat__num .mm-stat__unit { color: var(--volt-500); }
+.mm-stat--on-ink .mm-stat__label { color: var(--ink-300); }
+
+/* ---------- OutLink (hub out-link) ---------- */
+.mm-outlink {
+  font-family: var(--font-body); font-weight: var(--fw-semibold);
+  font-size: var(--fs-body);
+  color: var(--warm-900); text-decoration: none;
+  display: inline-flex; align-items: center; gap: 0.4em;
+  border-bottom: 1.5px solid var(--border-strong);
+  padding-bottom: 0.15em;
+  transition: border-color var(--dur-base) var(--ease-out), gap var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out);
+}
+.mm-outlink svg { width: 1em; height: 1em; transition: transform var(--dur-base) var(--ease-out); }
+.mm-outlink:hover { border-color: var(--volt-500); gap: 0.6em; }
+.mm-outlink:hover svg { transform: translate(2px, -2px); }
+.mm-outlink--on-ink { color: var(--text-on-ink); border-color: var(--ink-600); }
+.mm-outlink--on-ink:hover { border-color: var(--volt-500); }
+
+/* ---------- Card ---------- */
+.mm-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+}
+.mm-card--interactive { cursor: pointer; }
+.mm-card--interactive:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--border-strong); }
+.mm-card--ink { background: var(--ink-700); border-color: var(--ink-600); color: var(--text-on-ink); box-shadow: var(--shadow-ink); }
+.mm-card--ink.mm-card--interactive:hover { border-color: var(--ink-300); }
+.mm-card--flush { padding: 0; overflow: hidden; }
+
+/* ---------- Field ---------- */
+.mm-field { display: flex; flex-direction: column; gap: 0.45em; }
+.mm-field__label { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+.mm-field__input {
+  font-family: var(--font-body); font-size: var(--fs-body);
+  color: var(--text-strong); background: var(--surface-card);
+  border: 1.5px solid var(--border-strong); border-radius: var(--radius-md);
+  padding: 0.8em 1em; width: 100%;
+  transition: border-color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
+.mm-field__input::placeholder { color: var(--text-faint); }
+.mm-field__input:focus { outline: none; border-color: var(--ink-900); box-shadow: 0 0 0 3px rgba(200,255,61,0.28); }
+.mm-field__hint { font-size: var(--fs-xs); color: var(--text-faint); }
+
+/* ---------- Logo ---------- */
+.mm-logo { font-family: var(--font-display); font-weight: var(--fw-semibold); letter-spacing: -0.02em; color: var(--text-strong); display: inline-flex; align-items: center; gap: 0.4em; text-decoration: none; line-height: 1; }
+.mm-logo__spark { width: 0.85em; height: 0.85em; }
+.mm-logo__sur { color: var(--text-faint); font-weight: var(--fw-medium); }
+.mm-logo--on-ink { color: var(--text-on-ink); }
+.mm-logo--on-ink .mm-logo__sur { color: var(--ink-300); }

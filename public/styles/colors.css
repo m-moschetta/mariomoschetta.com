@@ -1,0 +1,87 @@
+/* ============================================================
+   COLORS — Mario Moschetta
+   System: INK (deep blue-black base) · VOLT (single electric-lime
+   accent, the ⚡) · PAPER/SAND (warm neutrals + white space).
+   One accent, used with discipline. Warm neutrals keep it human,
+   not cold dev-tool.
+   ============================================================ */
+:root {
+  /* ---- INK — cool deep blue-black, blue undertone ---- */
+  --ink-950: #070A12;   /* deepest void — Soglia / hero background */
+  --ink-900: #0B0F1A;   /* primary dark surface */
+  --ink-850: #0F1422;
+  --ink-800: #141A2A;   /* raised dark surface */
+  --ink-700: #1E2438;   /* cards on dark */
+  --ink-600: #2B3247;   /* hairline borders on dark */
+  --ink-500: #3C4459;   /* dividers on dark */
+  --ink-400: #5C6480;   /* muted text on dark */
+  --ink-300: #8088A0;   /* secondary text on dark */
+  --ink-200: #AEB4C6;   /* faint text on dark */
+
+  /* ---- VOLT — the electric-lime accent (⚡). One accent only. ---- */
+  --volt-300: #E6FF9E;  /* pale tint */
+  --volt-400: #D7FF5E;  /* light */
+  --volt-500: #C8FF3D;  /* PRIMARY accent — fills, the spark, key details */
+  --volt-600: #B4ED1C;  /* hover / press (deeper) */
+  --volt-700: #97C70F;
+  --volt-900: #36420A;  /* deep olive — accent TEXT on light surfaces (a11y) */
+  --volt-wash: #F4FFD2; /* faint lime wash for light-surface highlights */
+
+  /* ---- PAPER / SAND — warm neutrals + white space ---- */
+  --paper-50:  #FBF9F4; /* page background — warm white */
+  --paper-100: #F5F1E8; /* warm sand surface */
+  --paper-200: #ECE6D8; /* raised sand / muted blocks */
+  --paper-300: #DED6C4; /* hairline borders on light */
+  --paper-400: #C7BEA8; /* stronger borders / dividers */
+  --paper-500: #A89E86; /* warm placeholder */
+
+  /* ---- WARM TEXT (on paper) ---- */
+  --warm-900: #15171E;  /* headings on light */
+  --warm-800: #232733;  /* body on light */
+  --warm-600: #4B5160;  /* secondary on light */
+  --warm-500: #6E7384;  /* muted / captions on light */
+
+  /* ---- SEMANTIC STATUS — warm, desaturated, never competing with VOLT ---- */
+  --ok-500:    #4FA86E;  --ok-bg:   #E7F3EC;
+  --warn-500:  #D69B33;  --warn-bg: #F7EDD6;
+  --danger-500:#DD5742;  --danger-bg:#F8E2DD;
+  --info-500:  #4F82B8;  --info-bg: #E2ECF5;
+
+  /* ---- HORIZON motif — gradient stops (dark → dawn) ---- */
+  --horizon-low:  #0B0F1A;
+  --horizon-mid:  #18203A;
+  --horizon-high: #2C3A63; /* the lightening band at the top */
+
+  /* =========================================================
+     SEMANTIC ALIASES — reference these in components
+     ========================================================= */
+  /* Surfaces */
+  --surface-page:     var(--paper-50);
+  --surface-card:     #FFFFFF;
+  --surface-sunken:   var(--paper-100);
+  --surface-inverse:  var(--ink-900);
+  --surface-inverse-card: var(--ink-700);
+
+  /* Text */
+  --text-strong:   var(--warm-900);
+  --text-body:     var(--warm-800);
+  --text-muted:    var(--warm-600);
+  --text-faint:    var(--warm-500);
+  --text-on-ink:        #F3F1EA;  /* warm white on dark */
+  --text-on-ink-muted:  var(--ink-300);
+  --text-on-volt:       var(--ink-950); /* near-black on lime fill */
+
+  /* Accent */
+  --accent:         var(--volt-500);
+  --accent-hover:   var(--volt-600);
+  --accent-text:    var(--volt-900);   /* accent as readable text on light */
+  --accent-on-dark: var(--volt-500);   /* accent text/detail on dark */
+
+  /* Lines */
+  --border:        var(--paper-300);
+  --border-strong: var(--paper-400);
+  --border-on-ink: var(--ink-600);
+
+  /* Focus */
+  --focus-ring: var(--volt-600);
+}
