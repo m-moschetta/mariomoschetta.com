@@ -20,8 +20,24 @@
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
 
+  // Google Analytics 4 — caricato SOLO dopo consenso "all"
+  function loadGA() {
+    var id = (window.MM_LINKS && window.MM_LINKS.GA_ID) || "";
+    if (!id || window.__mmGA) return;
+    window.__mmGA = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", id, { anonymize_ip: true });
+  }
+
   function gateEmbeds() {
     var consent = get();
+    if (consent === "all") loadGA();
     document.querySelectorAll("iframe.mm-embed[data-src]").forEach(function (f) {
       var existing = f.parentNode.querySelector(".mm-embed-ph");
       if (consent === "all") {
