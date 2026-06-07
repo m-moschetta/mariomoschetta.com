@@ -21,7 +21,7 @@ window.MM_LINKS = {
   call:      "https://fantastical.app/mario-moschetta/thinking-intro-meeting",
   // codice / building in public
   github:    "https://github.com/m-moschetta",
-  // Google Analytics 4 — incolla qui il Measurement ID (G-XXXXXXXXXX). Vuoto = GA disattivato.
-  GA_ID:     "",
+  // Google Analytics 4 — Measurement ID (proprietà "mariomoschetta.com"). Caricato solo dopo consenso.
+  GA_ID:     "G-8WRNEJH6GN",
   SPOTIFY_SHOW_ID: "033qRcp0MspugE5BkK8Y5z"
 };
