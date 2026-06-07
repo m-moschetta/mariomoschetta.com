@@ -171,3 +171,13 @@
 .note-soon { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .04em; color: var(--volt-900); margin-top: var(--space-5); }
 .noteitem__link--soon { cursor: default; }
 .noteitem__link--soon:hover { padding-left: 0; }
+
+/* ---------- Canali (divulgazione) page ---------- */
+.media-feature { margin-bottom: var(--space-5); }
+.ig-card, .tt-card { aspect-ratio: 16 / 9; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; border-radius: 12px; margin-bottom: var(--space-5); color: #fff; position: relative; overflow: hidden; }
+.ig-card { background: linear-gradient(135deg, #3a2a5a, #7a3a8a 38%, #d6634a 78%, #f0b24a); }
+.tt-card { background: #0b0b0d; border: 1px solid var(--ink-600); }
+.tt-card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 32% 30%, rgba(37,244,238,.22), transparent 42%), radial-gradient(circle at 68% 72%, rgba(254,44,85,.22), transparent 42%); }
+.ig-card i, .ig-card span, .tt-card i, .tt-card span { position: relative; z-index: 1; }
+.ig-card i, .tt-card i { width: 40px; height: 40px; }
+.ig-card span, .tt-card span { font-family: var(--font-mono); font-size: var(--fs-sm); }

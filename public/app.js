@@ -16,7 +16,7 @@
   // ─────────────────────────────────────────────────────────
   var COPY = {
     it: {
-      nav: { storia: "Storia", progetti: "Progetti", aziende: "Aziende", formazione: "Formazione", note: "Note" },
+      nav: { storia: "Storia", progetti: "Progetti", aziende: "Aziende", formazione: "Formazione", canali: "Canali", note: "Note" },
       cta: "Scrivimi",
       soglia: { statementPre: "Accorcio la distanza tra ciò che immaginiamo e ", statementEm: "ciò che usiamo.", olivetti: "«Un sogno sembra un sogno fino a quando non si comincia a lavorarci.»", by: "Adriano Olivetti", cue: "Continua" },
       apertura: {
@@ -63,7 +63,8 @@
         podLink: "Ascolta l'ultima puntata",
         proof: "Oltre 20.000 persone · 7M+ visualizzazioni",
         channelsH: "Dove mi trovi",
-        ytT: "La tecnologia, spiegata semplice.", ytSub: "Video su ciò che sta cambiando.", ytLink: "Vai al canale"
+        ytT: "La tecnologia, spiegata semplice.", ytSub: "Video su ciò che sta cambiando.", ytLink: "Vai al canale",
+        allLink: "Esplora tutti i canali e i video"
       },
       contatto: { h: "Se quello che faccio ti somiglia, scrivimi.", p: "Due righe, senza impegno. Ti rispondo io.", sub: "WhatsApp o email, come preferisci.", call: "Prenota una call" },
       footer: {
@@ -74,7 +75,7 @@
       }
     },
     en: {
-      nav: { storia: "Story", progetti: "Projects", aziende: "Work", formazione: "Teaching", note: "Notes" },
+      nav: { storia: "Story", progetti: "Projects", aziende: "Work", formazione: "Teaching", canali: "Channels", note: "Notes" },
       cta: "Message me",
       soglia: { statementPre: "I close the gap between what we imagine and ", statementEm: "what we actually use.", olivetti: "“A dream looks like a dream until you start working on it.”", by: "Adriano Olivetti", cue: "Scroll" },
       apertura: {
@@ -121,7 +122,8 @@
         podLink: "Listen to the latest episode",
         proof: "20,000+ people · 7M+ views",
         channelsH: "Where to find me",
-        ytT: "Technology, made simple.", ytSub: "Videos on what's changing.", ytLink: "Go to the channel"
+        ytT: "Technology, made simple.", ytSub: "Videos on what's changing.", ytLink: "Go to the channel",
+        allLink: "Explore all channels & videos"
       },
       contatto: { h: "If what I do resonates, write to me.", p: "Two lines, no strings. You'll hear back from me.", sub: "WhatsApp or email, whichever you prefer.", call: "Book a call" },
       footer: {

@@ -30,7 +30,7 @@ function fillLinks(html) {
   });
 }
 
-const PAGES = ["storia", "progetti", "aziende", "formazione", "note"];
+const PAGES = ["storia", "progetti", "aziende", "formazione", "canali", "note"];
 let ok = 0;
 for (const p of PAGES) {
   try {

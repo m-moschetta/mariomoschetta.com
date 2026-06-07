@@ -10,7 +10,7 @@
   // ---- copy bilingue (mirror del design handoff) ----
   var PAGECOPY = {
     it: {
-      nav: { storia: "Storia", progetti: "Progetti", aziende: "Aziende", formazione: "Formazione", note: "Note" },
+      nav: { storia: "Storia", progetti: "Progetti", aziende: "Aziende", formazione: "Formazione", canali: "Canali", note: "Note" },
       cta: "Scrivimi", ctaCall: "Prenota una call",
       whatsapp: L.whatsapp,
       footer: {
@@ -94,6 +94,17 @@
         ctaH: "Cerchi qualcuno che la spieghi davvero?",
         ctaP: "Scrivimi: parliamo di cosa serve al tuo team o al tuo evento."
       },
+      canali: {
+        eyebrow: "Divulgazione",
+        h: "Racconto la tecnologia, ogni giorno.",
+        lead: "Spiego come funziona ciò che usiamo a una community di oltre 20.000 persone. Niente hype: solo come funzionano davvero le cose che ci ritroveremo tra le mani.",
+        proof: "Oltre 20.000 persone · 7M+ visualizzazioni complessive",
+        podK: "Podcast · settimanale", podT: "Thinking Forward", podSub: "Il podcast che conduco con Giancarlo, su come l'AI sta cambiando il lavoro.", podLink: "Ascolta su Spotify",
+        ytK: "Video", ytT: "Sul mio canale YouTube", ytSub: "La tecnologia spiegata semplice.", ytLink: "Vai al canale",
+        ttK: "Short quotidiani", ttT: "Ogni giorno su TikTok", ttSub: "I contenuti con cui ho costruito la community da zero.", ttLink: "Vai al profilo",
+        igK: "Reel & post", igT: "Su Instagram", igSub: "Divulgazione e dietro le quinte.", igLink: "Vai al profilo",
+        channelsH: "Tutti i canali"
+      },
       note: {
         eyebrow: "Note", h: "Appunti, mentre costruisco.",
         lead: "Scrivo quando ho qualcosa da dire — non per calendario. Articoli più lunghi e pensieri brevi, sotto lo stesso tetto.",
@@ -114,7 +125,7 @@
       }
     },
     en: {
-      nav: { storia: "Story", progetti: "Projects", aziende: "Work", formazione: "Teaching", note: "Notes" },
+      nav: { storia: "Story", progetti: "Projects", aziende: "Work", formazione: "Teaching", canali: "Channels", note: "Notes" },
       cta: "Message me", ctaCall: "Book a call",
       whatsapp: L.whatsappEn,
       footer: {
@@ -198,6 +209,17 @@
         ctaH: "Looking for someone who actually explains it?",
         ctaP: "Write to me: let's talk about what your team or event needs."
       },
+      canali: {
+        eyebrow: "Content",
+        h: "I explain technology, every day.",
+        lead: "I break down how the things we use actually work, for a community of 20,000+ people. No hype: just how the things we'll soon hold in our hands really work.",
+        proof: "20,000+ people · 7M+ total views",
+        podK: "Podcast · weekly", podT: "Thinking Forward", podSub: "The podcast I host with Giancarlo, on how AI is really changing work.", podLink: "Listen on Spotify",
+        ytK: "Video", ytT: "On my YouTube channel", ytSub: "Technology, made simple.", ytLink: "Go to the channel",
+        ttK: "Daily shorts", ttT: "Every day on TikTok", ttSub: "The content I built the community with, from zero.", ttLink: "Go to the profile",
+        igK: "Reels & posts", igT: "On Instagram", igSub: "Content and behind the scenes.", igLink: "Go to the profile",
+        channelsH: "All the channels"
+      },
       note: {
         eyebrow: "Notes", h: "Notes, while I build.",
         lead: "I write when I have something to say — not on a schedule. Longer articles and short thoughts, under one roof.",
@@ -246,7 +268,7 @@
 
   // ---- chrome ----
   function subnav(t, page, lang) {
-    var items = ["storia", "progetti", "aziende", "formazione", "note"];
+    var items = ["storia", "progetti", "aziende", "formazione", "canali", "note"];
     var links = items.map(function (k) {
       return '<a class="subnav__link' + (page === k ? ' is-active' : '') + '" href="' + k + '.html">' + esc(t.nav[k]) + '</a>';
     }).join("");
@@ -260,7 +282,7 @@
       '</div></div></nav>';
   }
   function navmenu(t, lang) {
-    var items = ["storia", "progetti", "aziende", "formazione", "note"];
+    var items = ["storia", "progetti", "aziende", "formazione", "canali", "note"];
     var links = items.map(function (k) { return '<a href="' + k + '.html">' + esc(t.nav[k]) + '</a>'; }).join("");
     return '<div class="navmenu" id="navmenu" aria-hidden="true">' +
       '<div class="navmenu__top wrap">' + logo(true) +
@@ -407,7 +429,56 @@
       '<button type="submit" class="mm-btn mm-btn--primary">' + esc(n.newsletterBtn) + '</button></form></div></div></section>';
   }
 
-  var BODIES = { storia: storiaBody, progetti: progettiBody, aziende: aziendeBody, formazione: formazioneBody, note: noteBody };
+  function canaliBody(t) {
+    var c = t.canali;
+    function card(k, ic, title, sub, embed, linkKey, linkLabel) {
+      return '<div class="media-card"><span class="media-card__k"><i data-lucide="' + ic + '"></i> ' + esc(k) + '</span>' +
+        '<h3 class="media-card__t">' + esc(title) + '</h3><p class="media-card__sub">' + esc(sub) + '</p>' + embed +
+        '<div class="media-card__link"><a class="mm-outlink mm-outlink--on-ink" data-link="' + linkKey + '" href="#">' + esc(linkLabel) +
+        ' <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div></div>';
+    }
+    var spotifyEmbed = '<iframe class="media-embed media-embed--spotify" title="Thinking Forward — Spotify" src="https://open.spotify.com/embed/show/' + (L.SPOTIFY_SHOW_ID || "") + '?theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+    var ytEmbed = '<button type="button" class="yt-facade media-embed" data-yt="XTHyW1TDOjw" aria-label="Riproduci il video YouTube" style="background-image:url(\'https://i.ytimg.com/vi/XTHyW1TDOjw/hqdefault.jpg\')"><span class="yt-facade__play"><i data-lucide="play"></i></span></button>';
+    var ttEmbed = '<div class="tt-card media-embed"><i data-lucide="music"></i><span>@mariomoschetta_</span></div>';
+    var igEmbed = '<div class="ig-card"><i data-lucide="instagram"></i><span>@mariomoschetta_</span></div>';
+    return '<section class="section pagehead"><div class="wrap">' + eyebrow(c.eyebrow) +
+      '<h1 class="pagehead__h">' + esc(c.h) + '</h1><p class="pagehead__lead">' + esc(c.lead) + '</p>' +
+      '<p class="proofline" style="color:var(--text-faint);margin:var(--space-5) 0 0">' + esc(c.proof) + '</p></div></section>' +
+      '<section class="section sec-ink"><div class="wrap">' +
+      '<div class="media-feature">' + card(c.podK, "mic", c.podT, c.podSub, spotifyEmbed, "spotify", c.podLink) + '</div>' +
+      '<div class="media-feature">' + card(c.ttK, "music", c.ttT, c.ttSub, ttEmbed, "tiktok", c.ttLink) + '</div>' +
+      '<div class="media-grid">' + card(c.ytK, "youtube", c.ytT, c.ytSub, ytEmbed, "youtube", c.ytLink) +
+      card(c.igK, "instagram", c.igT, c.igSub, igEmbed, "instagram", c.igLink) + '</div>' +
+      '<div class="channels-strip"><span class="channels__title">' + esc(c.channelsH) + '</span><div class="channels-row">' +
+      '<a class="chan" data-link="tiktok" href="#"><i data-lucide="music"></i><span class="chan__name">TikTok</span><span class="chan__h">@mariomoschetta_</span></a>' +
+      '<a class="chan" data-link="instagram" href="#"><i data-lucide="instagram"></i><span class="chan__name">Instagram</span><span class="chan__h">@mariomoschetta_</span></a>' +
+      '<a class="chan" data-link="youtube" href="#"><i data-lucide="youtube"></i><span class="chan__name">YouTube</span><span class="chan__h">@MarioMoschetta</span></a>' +
+      '<a class="chan" data-link="linkedin" href="#"><i data-lucide="linkedin"></i><span class="chan__name">LinkedIn</span><span class="chan__h">in/mario-moschetta</span></a>' +
+      '</div></div></div></section>';
+  }
+
+  function wireYouTube(root) {
+    (root || document).querySelectorAll(".yt-facade").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var id = btn.getAttribute("data-yt"); if (!id) return;
+        var f = document.createElement("iframe");
+        f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+        f.title = "YouTube — Mario Moschetta";
+        f.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+        f.setAttribute("allowfullscreen", "");
+        btn.innerHTML = ""; btn.appendChild(f); btn.classList.add("is-playing");
+      }, { once: true });
+    });
+  }
+  function loadTikTok() {
+    var old = document.getElementById("tiktok-embed-script");
+    if (old) old.remove();
+    var s = document.createElement("script");
+    s.id = "tiktok-embed-script"; s.async = true; s.src = "https://www.tiktok.com/embed.js";
+    document.body.appendChild(s);
+  }
+
+  var BODIES = { storia: storiaBody, progetti: progettiBody, aziende: aziendeBody, formazione: formazioneBody, canali: canaliBody, note: noteBody };
 
   // ---- behaviour ----
   function applyLinks(root) {
@@ -482,6 +553,11 @@
         document.getElementById("nl-hint").textContent = n.newsletterThanks;
         form.querySelector("input").value = "";
       });
+    }
+
+    // canali: embed YouTube (facade lazy)
+    if (page === "canali") {
+      wireYouTube(app);
     }
 
     if (window.lucide) window.lucide.createIcons();
