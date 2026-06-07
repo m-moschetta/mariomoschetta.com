@@ -36,7 +36,7 @@
         valoriH: "La tecnologia conta quando arriva alle persone.",
         valori: [
           { t: "Istruzione accessibile", d: "Sono equity partner in EdTech e attivo con Vision APS. La tecnologia nuova deve arrivare a chi non è del mestiere, prima e meglio." },
-          { t: "Costruire in pubblico", d: "Mostro il processo, non solo il risultato. Si impara di più da come una cosa è fatta che da quanto è lucida." },
+          { t: "Costruire in pubblico", d: "Mostro il processo, non solo il risultato. Si impara di più da come una cosa è fatta che da quanto è lucida.", linkKey: "github", linkLabel: "Il codice, su GitHub" },
           { t: "Anticipare, non inseguire", d: "Mi interessa il terreno che gli altri non vedono ancora. Non per arrivarci primo: per renderlo accessibile." }
         ]
       },
@@ -151,7 +151,7 @@
         valoriH: "Technology matters when it reaches people.",
         valori: [
           { t: "Accessible education", d: "I'm an equity partner in EdTech and active with Vision APS. New technology should reach those outside the field — sooner, and better." },
-          { t: "Building in public", d: "I show the process, not just the result. You learn more from how a thing is made than from how polished it looks." },
+          { t: "Building in public", d: "I show the process, not just the result. You learn more from how a thing is made than from how polished it looks.", linkKey: "github", linkLabel: "The code, on GitHub" },
           { t: "Anticipate, don't chase", d: "I care about the ground others can't see yet. Not to get there first — to make it accessible." }
         ]
       },
@@ -306,7 +306,7 @@
       '<a data-link="linkedin" href="#">LinkedIn</a></div>' +
       '<div class="footer__col"><h4>' + esc(f.more) + '</h4>' +
       '<a href="storia.html">' + esc(f.links.storia) + '</a><a href="formazione.html">' + esc(f.links.formazione) + '</a>' +
-      '<a href="note.html">' + esc(f.links.note) + '</a></div></div>' +
+      '<a href="note.html">' + esc(f.links.note) + '</a><a data-link="github" href="#">GitHub ↗</a></div></div>' +
       '<div class="footer__bottom"><small>' + esc(f.rights) + '</small><small>' + esc(f.built) + '</small></div></div></footer>';
   }
 
@@ -318,7 +318,8 @@
         '<div><h3 class="cv__t">' + esc(b.t) + '</h3><p class="cv__d">' + esc(b.d) + '</p></div></div>';
     }).join("");
     var valori = s.valori.map(function (v) {
-      return '<div class="valori__item"><h3>' + esc(v.t) + '</h3><p>' + esc(v.d) + '</p></div>';
+      var link = v.linkKey ? '<div class="valori__link">' + outlink(v.linkLabel, 'data-link="' + v.linkKey + '" href="#"') + '</div>' : "";
+      return '<div class="valori__item"><h3>' + esc(v.t) + '</h3><p>' + esc(v.d) + '</p>' + link + '</div>';
     }).join("");
     return '<section class="section pagehead"><div class="wrap storia__intro">' +
       '<div>' + eyebrow(s.eyebrow) + '<h1 class="pagehead__h">' + esc(s.h) + '</h1><p class="pagehead__lead">' + esc(s.lead) + '</p></div>' +

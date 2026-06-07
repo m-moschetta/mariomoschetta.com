@@ -52,6 +52,7 @@
 .valori__item h3 { font-size: var(--fs-h4); margin: 0 0 var(--space-3); }
 .valori__item p { font-size: var(--fs-body); line-height: 1.6; color: var(--text-muted); margin: 0; }
 .valori__item { padding-top: var(--space-4); border-top: 2px solid var(--volt-500); }
+.valori__link { margin-top: var(--space-4); }
 @media (max-width: 760px) { .valori { grid-template-columns: 1fr; } }
 
 /* ============================================================

@@ -19,5 +19,7 @@ window.MM_LINKS = {
   // contatto secondario
   email:     "mailto:mario@mariomoschetta.com",
   call:      "https://fantastical.app/mario-moschetta/thinking-intro-meeting",
+  // codice / building in public
+  github:    "https://github.com/m-moschetta",
   SPOTIFY_SHOW_ID: "033qRcp0MspugE5BkK8Y5z"
 };
