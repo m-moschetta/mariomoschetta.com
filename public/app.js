@@ -62,7 +62,8 @@
         podSub: "Il podcast che conduco con Giancarlo. Spotify + YouTube.",
         podLink: "Ascolta l'ultima puntata",
         proof: "Oltre 20.000 persone · 7M+ visualizzazioni",
-        channelsH: "Dove mi trovi"
+        channelsH: "Dove mi trovi",
+        ytT: "La tecnologia, spiegata semplice.", ytSub: "Video su ciò che sta cambiando.", ytLink: "Vai al canale"
       },
       contatto: { h: "Se quello che faccio ti somiglia, scrivimi.", p: "Due righe, senza impegno. Ti rispondo io.", sub: "WhatsApp o email, come preferisci.", call: "Prenota una call" },
       footer: {
@@ -119,7 +120,8 @@
         podSub: "The podcast I host with Giancarlo. Spotify + YouTube.",
         podLink: "Listen to the latest episode",
         proof: "20,000+ people · 7M+ views",
-        channelsH: "Where to find me"
+        channelsH: "Where to find me",
+        ytT: "Technology, made simple.", ytSub: "Videos on what's changing.", ytLink: "Go to the channel"
       },
       contatto: { h: "If what I do resonates, write to me.", p: "Two lines, no strings. You'll hear back from me.", sub: "WhatsApp or email, whichever you prefer.", call: "Book a call" },
       footer: {
@@ -279,6 +281,25 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") shut(); });
   }
 
+  // ── YouTube facade (click to load — no YT script until then) ─
+  function wireYouTube() {
+    document.querySelectorAll(".yt-facade").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var id = btn.getAttribute("data-yt");
+        if (!id) return;
+        var f = document.createElement("iframe");
+        f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+        f.title = "YouTube — Mario Moschetta";
+        f.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+        f.setAttribute("allowfullscreen", "");
+        f.loading = "lazy";
+        btn.innerHTML = "";
+        btn.appendChild(f);
+        btn.classList.add("is-playing");
+      }, { once: true });
+    });
+  }
+
   // ── boot ─────────────────────────────────────────────────
   function boot() {
     var saved = "it";
@@ -287,9 +308,9 @@
     document.querySelectorAll(".lang button").forEach(function (b) {
       b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); });
     });
-    wirePodcast();
     wireSmoothScroll();
     wireMobileMenu();
+    wireYouTube();
     if (window.lucide) window.lucide.createIcons();
     if (saved !== "it") setLang(saved); // IT is the static baseline
   }
