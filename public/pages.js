@@ -575,6 +575,8 @@
 
     if (window.lucide) window.lucide.createIcons();
     if (window.MM_gateEmbeds) window.MM_gateEmbeds();
+    // reveal dei contenuti appena iniettati (sincrono → nessun flash)
+    if (window.MM_reveal) window.MM_reveal.scan(app);
   }
 
   function boot() {
