@@ -41,7 +41,7 @@
 .mm-btn--on-ink.mm-btn--ghost:hover { color: var(--text-on-ink); background: var(--ink-800); }
 
 .mm-btn--sm { font-size: var(--fs-sm); padding: 0.62em 1.05em; }
-.mm-btn--lg { font-size: var(--fs-body-lg); padding: 1em 1.7em; }
+.mm-btn--lg { font-size: var(--fs-body); padding: 0.9em 1.6em; }
 .mm-btn--block { display: flex; width: 100%; }
 
 /* ---------- Tag / proof chip ---------- */
