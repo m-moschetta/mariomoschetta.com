@@ -295,6 +295,10 @@ body.menu-open { overflow: hidden; }
 @media (min-width: 921px) { .navmenu { display: none; } }
 
 /* ---------- Secondary CTA (email · book a call) ---------- */
+/* riga CTA: bottone + link secondari. Flex con gap → spazio corretto sia
+   affiancati (gap orizzontale) sia impilati su mobile (gap verticale). */
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-4) var(--space-5); margin-top: var(--space-6); }
+.cta-row .cta-alt { margin-top: 0; }
 .cta-alt { display: inline-flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; margin-top: var(--space-5); font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .04em; }
 .cta-alt a { color: var(--text-muted); text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 3px; transition: color var(--dur-base) var(--ease-out), text-decoration-color var(--dur-base) var(--ease-out); }
 .cta-alt a:hover { color: var(--text-strong); text-decoration-color: var(--volt-500); }

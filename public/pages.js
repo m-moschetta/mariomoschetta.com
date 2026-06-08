@@ -382,7 +382,7 @@
       '<div class="mm-card mm-card--flush handoff__card"><h3>' + esc(a.training.t) + '</h3><p>' + esc(a.training.d) + '</p>' +
       outlink(a.training.link, 'href="formazione.html"', "arrow-right") + '</div></div></div></section>' +
       '<section class="section sec-ink"><div class="wrap--narrow ctaband"><h2>' + esc(a.ctaH) + '</h2>' +
-      '<p>' + esc(a.ctaP) + '</p>' + ctaBtn(t, true) + ctaAlt(t) + '</div></section>';
+      '<p>' + esc(a.ctaP) + '</p>' + '<div class="cta-row">' + ctaBtn(t, true) + ctaAlt(t) + '</div>' + '</div></section>';
   }
 
   function formazioneBody(t) {
@@ -404,7 +404,7 @@
       '<h2 class="divulgo__h">' + esc(f.proofH) + '</h2><p class="divulgo__p">' + esc(f.proofP) + '</p></div>' +
       '<div class="divulgo__stat"><div class="divulgo__big">7M+</div><div class="divulgo__cap">' + esc(f.statCap) + '</div></div></div></section>' +
       '<section class="section"><div class="wrap--narrow ctaband"><h2 style="color:var(--text-strong)">' + esc(f.ctaH) + '</h2>' +
-      '<p style="color:var(--text-muted)">' + esc(f.ctaP) + '</p>' + ctaBtn(t, true) + ctaAlt(t) + '</div></section>';
+      '<p style="color:var(--text-muted)">' + esc(f.ctaP) + '</p>' + '<div class="cta-row">' + ctaBtn(t, true) + ctaAlt(t) + '</div>' + '</div></section>';
   }
 
   function noteList(n, filterIdx) {
