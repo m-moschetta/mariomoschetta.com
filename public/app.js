@@ -31,7 +31,7 @@
           { h: "Primo: capire come funzionano le persone.", body: "Ho studiato marketing perché volevo capire una cosa sola: perché le persone scelgono ciò che scelgono. Se avessi voluto solo costruire, <b>avrei fatto ingegneria</b>." },
           { h: "Poi ho costruito.", body: "Nel 2021 ho co-fondato Fyblo, una fintech che portava gli strumenti finanziari sulla blockchain. Un'idea che in pochi, allora, pensavano avesse senso. L'abbiamo costruita davvero — piattaforma DLT, un wallet proprietario conforme a eIDAS, le prime tokenizzazioni — e a crederci sono stati investitori come <b>CDP Venture Capital, Zest, Credem e Nexi</b>, fino alla call DLT del Milano Hub di Banca d'Italia. Nel 2025 tecnologia e asset sono passati ad Add Value." },
           { h: "Soprattutto, ho imparato a portare le cose a un mercato più ampio.", body: "In Pathway ho fatto crescere un prodotto edtech fino a <b>migliaia di persone</b>, con partner come Mondadori e il British Council. Perché un'idea, per contare, deve arrivare a chi la userà." },
-          { h: "Oggi.", body: "Con <b>Thinking</b> costruisco software per chi ha qualcosa di nuovo da portare nel mondo, e con <b>Fatturai</b> lo faccio per me. Il prossimo passo è uno solo: costruire e scalare qualcosa di <b>intero</b>." }
+          { h: "Oggi.", body: "Con <b>Thinking</b> costruisco software per chi ha qualcosa di nuovo da portare nel mondo, e con <b>Fatturai</b> e <b>CrmAI</b> lo faccio per me. Il prossimo passo è uno solo: costruire e scalare qualcosa di <b>intero</b>." }
         ],
         link: "Il percorso, per intero"
       },
@@ -39,7 +39,7 @@
         eyebrow: "Cosa faccio oggi",
         h: "Tre verbi. Una persona sola dietro.",
         pillars: [
-          { ic: "code-xml", t: "Costruisco", d: "Software, app e SaaS per chi ha un'idea nuova da portare sul mercato.", link: "Thinking", linkKey: "thinking" },
+          { ic: "code-xml", t: "Costruisco", d: "Con Thinking, la mia software house: prodotti come CrmAI e Fatturai, e software su misura per chi ha un'idea nuova da portare sul mercato.", link: "Thinking", linkKey: "thinking" },
           { ic: "graduation-cap", t: "Insegno", d: "Porto le tecnologie che stanno cambiando il lavoro — l'AI in testa — a professionisti e aziende. Al Talent Garden e oltre.", link: "La formazione", href: "#cosa" },
           { ic: "radio", t: "Divulgo", d: "Racconto la tecnologia a una community di oltre 20.000 persone. Ogni giorno, con parole semplici.", link: "I canali", href: "#racconto" }
         ]
@@ -50,7 +50,8 @@
         names: [
           { t: "Fyblo", meta: "Fintech · 2021—2025", linkKey: "fyblo" },
           { t: "Pathway", meta: "Growth · edtech", linkKey: "pathway" },
-          { t: "Fatturai", meta: "SaaS · live", linkKey: "fatturai" },
+          { t: "CrmAI", meta: "SaaS · Thinking · live", linkKey: "crmai" },
+          { t: "Fatturai", meta: "SaaS · Thinking · live", linkKey: "fatturai" },
           { t: "Lavori su misura", meta: "con Thinking", linkKey: "thinking" }
         ],
         link: "Apri i progetti"
@@ -90,7 +91,7 @@
           { h: "First: understanding how people work.", body: "I studied marketing because I wanted to understand one thing: why people choose what they choose. If I'd only wanted to build, <b>I'd have studied engineering</b>." },
           { h: "Then I built.", body: "In 2021 I co-founded Fyblo, a fintech bringing financial instruments onto the blockchain. An idea few thought made sense back then. We actually built it — a DLT platform, a proprietary eIDAS-aligned wallet, the first tokenizations — and the believers were investors like <b>CDP Venture Capital, Zest, Credem and Nexi</b>, all the way to the DLT call of the Bank of Italy's Milano Hub. In 2025 the technology and assets passed to Add Value." },
           { h: "Above all, I learned to take things to a wider market.", body: "At Pathway I grew an edtech product to <b>thousands of people</b>, with partners like Mondadori and the British Council. Because an idea, to matter, has to reach the people who'll use it." },
-          { h: "Today.", body: "With <b>Thinking</b> I build software for people who have something new to bring into the world, and with <b>Fatturai</b> I do it for myself. The next step is just one: to build and scale something <b>whole</b>." }
+          { h: "Today.", body: "With <b>Thinking</b> I build software for people who have something new to bring into the world, and with <b>Fatturai</b> and <b>CrmAI</b> I do it for myself. The next step is just one: to build and scale something <b>whole</b>." }
         ],
         link: "The path, in full"
       },
@@ -98,7 +99,7 @@
         eyebrow: "What I do",
         h: "Three verbs. One person behind them.",
         pillars: [
-          { ic: "code-xml", t: "I build", d: "Software, apps and SaaS for people with a new idea to bring to market.", link: "Thinking", linkKey: "thinking" },
+          { ic: "code-xml", t: "I build", d: "With Thinking, my software house: products like CrmAI and Fatturai, and custom software for people with a new idea to bring to market.", link: "Thinking", linkKey: "thinking" },
           { ic: "graduation-cap", t: "I teach", d: "I bring the technologies reshaping work — AI first — to professionals and companies. At Talent Garden and beyond.", link: "Teaching", href: "#cosa" },
           { ic: "radio", t: "I share", d: "I explain technology to a community of 20,000+ people. Every day, in plain words.", link: "The channels", href: "#racconto" }
         ]
@@ -109,7 +110,8 @@
         names: [
           { t: "Fyblo", meta: "Fintech · 2021—2025", linkKey: "fyblo" },
           { t: "Pathway", meta: "Growth · edtech", linkKey: "pathway" },
-          { t: "Fatturai", meta: "SaaS · live", linkKey: "fatturai" },
+          { t: "CrmAI", meta: "SaaS · Thinking · live", linkKey: "crmai" },
+          { t: "Fatturai", meta: "SaaS · Thinking · live", linkKey: "fatturai" },
           { t: "Custom work", meta: "with Thinking", linkKey: "thinking" }
         ],
         link: "Open the projects"

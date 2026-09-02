@@ -30,7 +30,7 @@
           { yr: "2021—2025", t: "Fyblo. Costruire sul serio.", d: "Co-fondatore di una fintech che portava gli strumenti finanziari sulla blockchain — un'idea che in pochi, allora, pensavano avesse senso. L'abbiamo costruita davvero: piattaforma DLT, un wallet proprietario conforme a eIDAS, le prime tokenizzazioni. A crederci sono stati investitori come CDP Venture Capital, Zest, Credem e Nexi, fino alla call DLT del Milano Hub di Banca d'Italia. Nel 2025 tecnologia e asset sono passati ad Add Value." },
           { yr: "Pathway", t: "Portare a mercato.", d: "Head of Growth di un prodotto edtech, cresciuto fino a migliaia di persone su B2C e B2B, con partner come Mondadori (PLAI) e il British Council. Perché un'idea, per contare, deve arrivare a chi la userà." },
           { yr: "Talent Garden", t: "Insegnare.", d: "Istruttore: porto AI, blockchain e cloud a professionisti e aziende. Spiegare il complesso in modo semplice è diventato un mestiere, non un hobby." },
-          { yr: "Oggi", t: "Thinking, Fatturai, e il racconto.", d: "Con Thinking costruisco software per chi ha qualcosa di nuovo da portare nel mondo; con Fatturai lo faccio per me. E ogni giorno racconto la tecnologia a una community di oltre 20.000 persone." }
+          { yr: "Oggi", t: "Thinking, i suoi prodotti, e il racconto.", d: "Con Thinking costruisco software per chi ha qualcosa di nuovo da portare nel mondo; con Fatturai e CrmAI lo faccio per me. E ogni giorno racconto la tecnologia a una community di oltre 20.000 persone." }
         ],
         valoriEyebrow: "In cosa credo",
         valoriH: "La tecnologia conta quando arriva alle persone.",
@@ -46,7 +46,8 @@
         cases: [
           { t: "Fyblo", meta: "Fintech regolamentata · 2021—2025 · Co-founder", d: "Una fintech per portare gli strumenti finanziari sulla blockchain, quando in pochi pensavano avesse senso. Abbiamo costruito la piattaforma DLT, un wallet proprietario per custodire asset digitali in Europa e le prime tokenizzazioni di strumenti partecipativi. A crederci sono stati investitori come CDP Venture Capital, Zest, Credem e Nexi, fino alla call DLT del Milano Hub di Banca d'Italia. Nel 2025 tecnologia e asset sono passati ad Add Value.", tags: ["tokenizzazione", "wallet proprietario", "DLT", "fintech regolamentata"], proof: "Investitori: CDP Venture Capital · Zest · Credem · Nexi", link: "Fyblo", linkKey: "fyblo", sources: [{ l: "Annuncio Zest VC", u: "https://www.instagram.com/p/DUA1b35iGkS/" }, { l: "Crunchbase", u: "https://www.crunchbase.com/organization/fyblo" }, { l: "AziendaBanca", u: "https://www.aziendabanca.it/notizie/fintech-insurtech/re-token" }] },
           { t: "Pathway", meta: "Edtech · Head of Growth · Mondadori PLAI 2024", d: "In Pathway ho fatto crescere Way2IELTS — una academy AI per la preparazione alla certificazione d'inglese — fino a migliaia di persone, su B2C e B2B. Selezionata nell'acceleratore Mondadori PLAI e in partnership con il British Council. La prova che so portare a mercato, non solo a compimento.", tags: ["growth", "B2C + B2B", "AI academy"], proof: "Migliaia di utenti · Mondadori PLAI · British Council", link: "Pathway", linkKey: "pathway", sources: [{ l: "Mondadori PLAI", u: "https://www.mondadorigroup.com/media-room/news-and-press-releases/2024/11-startups-for-plais-first-acceleration-round" }, { l: "Primaonline", u: "https://www.primaonline.it/2025/02/06/432642/mondadori-accelera-sullai-e-lancia-le-start-up-di-plai/" }, { l: "Way2IELTS", u: "https://www.way2ielts.com/" }] },
-          { t: "Fatturai", meta: "SaaS · live", d: "Un SaaS di fatturazione con integrazione SDI, oggi vivo e con utenti reali. È dove costruisco per me ciò che costruisco per gli altri: prodotto, non slide.", tags: ["SaaS", "SDI", "AI"], proof: "Live · utenti reali", link: "Fatturai", linkKey: "fatturai" },
+          { t: "CrmAI", meta: "SaaS · Thinking · live", d: "Il CRM che si aggiorna mentre parli. Registri una call o incontri qualcuno, e deal, contatto e prossimo passo sono già scritti: gli agenti lavorano, tu approvi. Costruito da Thinking per professionisti, founder e team piccoli, su web, iOS e Android.", tags: ["CRM AI-native", "trascrizione call", "MCP", "iOS + Android"], proof: "Live · web, App Store e Google Play", link: "CrmAI", linkKey: "crmai" },
+          { t: "Fatturai", meta: "SaaS · Thinking · live", d: "Un SaaS di fatturazione con integrazione SDI, oggi vivo e con utenti reali. È dove costruisco per me ciò che costruisco per gli altri: prodotto, non slide.", tags: ["SaaS", "SDI", "AI"], proof: "Live · oltre 10.000 fatture create", link: "Fatturai", linkKey: "fatturai" },
           { t: "Lavori su misura", meta: "con Thinking S.R.L.", d: "App native, piattaforme e MVP per startup e PMI che hanno un'idea nuova da portare sul mercato. AI per andare veloce, developer esperti che supervisionano ogni progetto.", tags: ["app native", "piattaforme", "MVP"], proof: "Lo spoke commerciale: si costruisce con Thinking", link: "Thinking", linkKey: "thinking" }
         ]
       },
@@ -65,6 +66,17 @@
         forYes: { t: "Fa per te se", items: ["hai un'idea nuova e vuoi vederla nel mondo reale", "preferisci un prodotto usato a un progetto perfetto nel cassetto", "vuoi qualcuno che capisca mercato e codice, non solo uno dei due"] },
         forNo: { t: "Non fa per te se", items: ["cerchi il preventivo più basso a parità di brief", "vuoi solo \"eseguire\" senza mettere in discussione l'idea", "il tempo non conta e va bene aspettare un anno"] },
         pricingNote: "Niente listino. Mi scrivi cosa hai in mente, ti dico onestamente se è fattibile, come, e cosa serve.",
+        company: {
+          eyebrow: "L'azienda",
+          h: "Thinking: lo studio dove il software prende forma.",
+          lead: "Thinking S.R.L. è la software house AI-first che ho fondato a Milano. Costruiamo prodotti nostri e software su misura per startup e PMI, con l'AI dentro dal primo giorno: primo prototipo funzionante in poche settimane, developer esperti che supervisionano ogni rilascio.",
+          meta: "Thinking S.R.L. · Milano · P.IVA 14675640966",
+          products: [
+            { k: "Prodotto", t: "CrmAI", d: "Il CRM che si aggiorna mentre parli: call trascritte, deal e contatti scritti dagli agenti, tu approvi. Web, iOS e Android.", link: "crmai.it", linkKey: "crmai" },
+            { k: "Prodotto", t: "Fatturai", d: "Fatture e tasse per partite IVA e forfettari: parli o scrivi, l'AI prepara fattura, XML e invio SDI. Oltre 10.000 fatture create.", link: "fatturai.it", linkKey: "fatturai" },
+            { k: "Servizio", t: "Sviluppo su misura", d: "Gestionali, CRM, app native, web app e automazioni AI cuciti sul flusso di lavoro dell'azienda. Da 2 a 8 settimane al primo rilascio.", link: "thinkingstudio.eu", linkKey: "thinking" }
+          ]
+        },
         thinking: { t: "Il software si costruisce con Thinking.", d: "Thinking S.R.L. è lo studio AI-native dove prendono forma i progetti. Qui sono io; lì c'è la squadra.", link: "Vai a Thinking" },
         training: { t: "Cerchi formazione, non sviluppo?", d: "Porto AI, blockchain e cloud a team e aziende. È un percorso a parte.", link: "La formazione" },
         ctaH: "Hai un'idea? Vediamo se possiamo costruirla.",
@@ -145,7 +157,7 @@
           { yr: "2021—2025", t: "Fyblo. Building for real.", d: "Co-founder of a fintech bringing financial instruments onto the blockchain — an idea few thought made sense back then. We actually built it: a DLT platform, a proprietary eIDAS-aligned wallet, the first tokenizations. The believers were investors like CDP Venture Capital, Zest, Credem and Nexi, all the way to the DLT call of the Bank of Italy's Milano Hub. In 2025 the technology and assets passed to Add Value." },
           { yr: "Pathway", t: "Taking things to market.", d: "Head of Growth of an edtech product, grown to thousands of people across B2C and B2B, with partners like Mondadori (PLAI) and the British Council. Because an idea, to matter, has to reach the people who'll use it." },
           { yr: "Talent Garden", t: "Teaching.", d: "Instructor: I bring AI, blockchain and cloud to professionals and companies. Explaining the complex simply became a craft, not a hobby." },
-          { yr: "Today", t: "Thinking, Fatturai, and the storytelling.", d: "With Thinking I build software for people who have something new to bring into the world; with Fatturai I do it for myself. And every day I explain technology to a community of 20,000+ people." }
+          { yr: "Today", t: "Thinking, its products, and the storytelling.", d: "With Thinking I build software for people who have something new to bring into the world; with Fatturai and CrmAI I do it for myself. And every day I explain technology to a community of 20,000+ people." }
         ],
         valoriEyebrow: "What I believe",
         valoriH: "Technology matters when it reaches people.",
@@ -161,7 +173,8 @@
         cases: [
           { t: "Fyblo", meta: "Regulated fintech · 2021—2025 · Co-founder", d: "A fintech bringing financial instruments onto the blockchain, when few thought it made sense. We built the DLT platform, a proprietary wallet to custody digital assets in Europe, and the first tokenizations of participatory instruments. The believers were investors like CDP Venture Capital, Zest, Credem and Nexi, all the way to the DLT call of the Bank of Italy's Milano Hub. In 2025 the technology and assets passed to Add Value.", tags: ["tokenization", "proprietary wallet", "DLT", "regulated fintech"], proof: "Investors: CDP Venture Capital · Zest · Credem · Nexi", link: "Fyblo", linkKey: "fyblo", sources: [{ l: "Zest VC announcement", u: "https://www.instagram.com/p/DUA1b35iGkS/" }, { l: "Crunchbase", u: "https://www.crunchbase.com/organization/fyblo" }, { l: "AziendaBanca", u: "https://www.aziendabanca.it/notizie/fintech-insurtech/re-token" }] },
           { t: "Pathway", meta: "Edtech · Head of Growth · Mondadori PLAI 2024", d: "At Pathway I grew Way2IELTS — an AI academy for English certification prep — to thousands of people, across B2C and B2B. Selected into the Mondadori PLAI accelerator and partnered with the British Council. Proof that I take things to market, not just to completion.", tags: ["growth", "B2C + B2B", "AI academy"], proof: "Thousands of users · Mondadori PLAI · British Council", link: "Pathway", linkKey: "pathway", sources: [{ l: "Mondadori PLAI", u: "https://www.mondadorigroup.com/media-room/news-and-press-releases/2024/11-startups-for-plais-first-acceleration-round" }, { l: "Primaonline", u: "https://www.primaonline.it/2025/02/06/432642/mondadori-accelera-sullai-e-lancia-le-start-up-di-plai/" }, { l: "Way2IELTS", u: "https://www.way2ielts.com/" }] },
-          { t: "Fatturai", meta: "SaaS · live", d: "An invoicing SaaS with SDI integration, live today with real users. It's where I build for myself what I build for others: product, not slides.", tags: ["SaaS", "SDI", "AI"], proof: "Live · real users", link: "Fatturai", linkKey: "fatturai" },
+          { t: "CrmAI", meta: "SaaS · Thinking · live", d: "The CRM that updates itself while you talk. Record a call or meet someone, and the deal, contact and next step are already written: agents do the work, you approve. Built by Thinking for professionals, founders and small teams, on web, iOS and Android.", tags: ["AI-native CRM", "call transcription", "MCP", "iOS + Android"], proof: "Live · web, App Store and Google Play", link: "CrmAI", linkKey: "crmai" },
+          { t: "Fatturai", meta: "SaaS · Thinking · live", d: "An invoicing SaaS with SDI integration, live today with real users. It's where I build for myself what I build for others: product, not slides.", tags: ["SaaS", "SDI", "AI"], proof: "Live · 10,000+ invoices created", link: "Fatturai", linkKey: "fatturai" },
           { t: "Custom work", meta: "with Thinking S.R.L.", d: "Native apps, platforms and MVPs for startups and SMEs with a new idea to bring to market. AI to move fast, experienced developers supervising every project.", tags: ["native apps", "platforms", "MVP"], proof: "The commercial spoke: built with Thinking", link: "Thinking", linkKey: "thinking" }
         ]
       },
@@ -180,6 +193,17 @@
         forYes: { t: "It's for you if", items: ["you have a new idea and want to see it in the real world", "you'd rather have a product people use than a perfect one in a drawer", "you want someone who understands market and code, not just one of the two"] },
         forNo: { t: "It's not for you if", items: ["you're after the lowest quote for the same brief", "you just want execution, no questioning of the idea", "time doesn't matter and waiting a year is fine"] },
         pricingNote: "No price list. Tell me what you have in mind; I'll tell you honestly if it's doable, how, and what it takes.",
+        company: {
+          eyebrow: "The company",
+          h: "Thinking: the studio where software takes shape.",
+          lead: "Thinking S.R.L. is the AI-first software house I founded in Milan. We build our own products and custom software for startups and SMEs, with AI woven in from day one: a working prototype in a few weeks, experienced developers supervising every release.",
+          meta: "Thinking S.R.L. · Milan, Italy · VAT 14675640966",
+          products: [
+            { k: "Product", t: "CrmAI", d: "The CRM that updates itself while you talk: calls transcribed, deals and contacts written by agents, you approve. Web, iOS and Android.", link: "crmai.it", linkKey: "crmai" },
+            { k: "Product", t: "Fatturai", d: "Invoices and taxes for Italian freelancers: speak or type, the AI prepares the invoice, the XML and the SDI submission. 10,000+ invoices created.", link: "fatturai.it", linkKey: "fatturai" },
+            { k: "Service", t: "Custom development", d: "Management systems, CRMs, native apps, web apps and AI automations tailored to how a company actually works. First release in 2 to 8 weeks.", link: "thinkingstudio.eu", linkKey: "thinking" }
+          ]
+        },
         thinking: { t: "Software gets built with Thinking.", d: "Thinking S.R.L. is the AI-native studio where projects take shape. Here it's me; there it's the team.", link: "Go to Thinking" },
         training: { t: "Looking for teaching, not development?", d: "I bring AI, blockchain and cloud to teams and companies. That's a separate track.", link: "Teaching" },
         ctaH: "Got an idea? Let's see if we can build it.",
@@ -307,7 +331,7 @@
       '<div style="max-width:30ch">' + logo(true) +
       '<p style="margin-top:14px;font-size:var(--fs-sm);color:var(--ink-300);line-height:1.5">' + esc(f.tagline) + '</p></div>' +
       '<div class="footer__col"><h4>' + esc(f.projects) + '</h4>' +
-      '<a data-link="thinking" href="#">Thinking S.R.L. ↗</a><a data-link="fatturai" href="#">Fatturai ↗</a></div>' +
+      '<a data-link="thinking" href="#">Thinking S.R.L. ↗</a><a data-link="crmai" href="#">CrmAI ↗</a><a data-link="fatturai" href="#">Fatturai ↗</a></div>' +
       '<div class="footer__col"><h4>' + esc(f.channelsCol) + '</h4>' +
       '<a data-link="spotify" href="#">Spotify</a><a data-link="youtube" href="#">YouTube</a>' +
       '<a data-link="tiktok" href="#">TikTok</a><a data-link="instagram" href="#">Instagram</a>' +
@@ -369,8 +393,19 @@
         '<h3 class="step-c__t">' + esc(st.t) + '</h3><p class="step-c__d">' + esc(st.d) + '</p></div>';
     }).join("");
     function li(items) { return items.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join(""); }
+    var co = a.company;
+    var products = co.products.map(function (pr) {
+      return '<div class="mm-card mm-card--flush product"><span class="product__k">' + esc(pr.k) + '</span>' +
+        '<h3 class="product__t">' + esc(pr.t) + '</h3><p class="product__d">' + esc(pr.d) + '</p>' +
+        '<div class="product__link">' + outlink(pr.link, 'data-link="' + pr.linkKey + '" href="#"') + '</div></div>';
+    }).join("");
+    var company = '<section class="section sec-ink"><div class="wrap"><div class="eyebrow-row">' + eyebrow(co.eyebrow, true) + '</div>' +
+      '<div class="company"><div><h2 class="company__h">' + esc(co.h) + '</h2><p class="company__lead">' + esc(co.lead) + '</p>' +
+      '<span class="company__meta">' + esc(co.meta) + '</span></div></div>' +
+      '<div class="products">' + products + '</div></div></section>';
     return '<section class="section pagehead"><div class="wrap">' + eyebrow(a.eyebrow) +
       '<h1 class="pagehead__h">' + esc(a.h) + '</h1><p class="pagehead__lead">' + esc(a.lead) + '</p></div></section>' +
+      company +
       '<section class="section sec-sand"><div class="wrap">' + eyebrow(a.stepEyebrow) +
       '<div class="steps stack">' + steps + '</div></div></section>' +
       '<section class="section"><div class="wrap">' + eyebrow(a.forEyebrow) + '<div class="forwho">' +

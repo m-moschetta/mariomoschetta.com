@@ -93,6 +93,18 @@
 .pricing { margin-top: var(--space-6); font-size: var(--fs-body); line-height: 1.6; color: var(--text-muted); max-width: 58ch; }
 @media (max-width: 720px) { .forwho { grid-template-columns: 1fr; } }
 
+.company { margin-top: var(--space-6); max-width: 64ch; }
+.company__h { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-h2); line-height: var(--lh-display); letter-spacing: var(--ls-display); color: var(--text-on-ink); margin: 0 0 var(--space-4); }
+.company__lead { font-size: var(--fs-lead); line-height: var(--lh-snug); color: var(--ink-200); margin: 0 0 var(--space-4); }
+.company__meta { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .06em; color: var(--ink-300); }
+.products { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); margin-top: var(--space-7); }
+.product { padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-3); }
+.product__k { font-family: var(--font-mono); font-size: var(--fs-xs); letter-spacing: .14em; text-transform: uppercase; color: var(--volt-900); }
+.product__t { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-h4); margin: 0; letter-spacing: var(--ls-snug); }
+.product__d { font-size: var(--fs-body); line-height: 1.55; color: var(--text-muted); margin: 0; }
+.product__link { margin-top: auto; padding-top: var(--space-3); }
+@media (max-width: 820px) { .products { grid-template-columns: 1fr; } }
+
 .handoff { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); margin-top: var(--space-7); }
 .handoff__card { padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-3); }
 .handoff__card h3 { font-size: var(--fs-h4); margin: 0; }
