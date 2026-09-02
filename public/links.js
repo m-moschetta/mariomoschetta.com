@@ -8,7 +8,8 @@ window.MM_LINKS = {
   fyblo:     "https://fyblo.com",
   pathway:   "https://way2ielts.com",
   fatturai:  "https://fatturai.it",
-  thinking:  "https://thinkingstudio.dev",
+  crmai:     "https://crmai.it",
+  thinking:  "https://thinkingstudio.eu",
   // social
   tiktok:    "https://www.tiktok.com/@mariomoschetta_",
   instagram: "https://www.instagram.com/mariomoschetta_",
